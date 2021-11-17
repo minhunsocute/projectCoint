@@ -15,6 +15,7 @@ namespace Server_manage
     public partial class Form1 : Form
     {
         SimpleTcpServer server;
+        List<string> listClient = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +29,8 @@ namespace Server_manage
 
         private void Form1_Load(object sender, EventArgs e)
         {
- //           autoDataToSql();   
+            //           autoDataToSql();   
+            listClient = new List<string>();
         }
 
         private void CreateClient_Click(object sender, EventArgs e)
@@ -52,14 +54,49 @@ namespace Server_manage
                 MessageBox.Show("textIp is NULL","Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 
+        private void checkString(string s,DataReceivedEventArgs e) {
+            sql_manage f = new sql_manage();
+            if (s[0] == '1') {
+                if (f.checkLogin(s) == -1)
+                    server.Send(e.IpPort, "1Success");//Đăng nhập thành công
+                else
+                    server.Send(e.IpPort, "2Invalid");//Đăng nhập không thành công
+            }
+            else if (s[0] == '2') {
+                if (f.checkLogin(s) == -1)
+                    server.Send(e.IpPort, "3Invalid");//Đăng ký không thành công
+                else {
+                    f.Insert_Account(s);
+                    server.Send(e.IpPort, "4Success");//Đăng ký thành công
+                }
+            }
+        }
         private void Events_DataRecceived(object sender, DataReceivedEventArgs e){
+            checkString(Encoding.UTF8.GetString(e.Data), e);
         }
 
         private void Events_ClientDisconnected(object sender, ClientDisconnectedEventArgs e){
-       
+            listClientText.Text = string.Empty;
+            int i = 0;
+            foreach(string item in listClient) { 
+                if(item == e.IpPort) {
+                    listClient.RemoveAt(i);
+                    break;
+                }
+                i++;
+            }
+            foreach (string item in listClient)
+                listClientText.Text += $"{item}{Environment.NewLine}";
         }
 
         private void Events_ClientConnected(object sender, ClientConnectedEventArgs e){
+            listClient.Add(e.IpPort);
+            listClientText.Text += $"{e.IpPort}{Environment.NewLine}";
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            
         }
         //https://stackoverflow.com/questions/41683798/convert-json-from-get-request-into-text-boxes-in-c-sharp-winforms-application
     }

@@ -112,5 +112,44 @@ namespace Server_manage
         public static void updateData() {
             var task = GetFromCompaniesHouse();
         }
+        //INSERT INTO ACCOUNT TABLE
+        public void Insert_Account(string stringCheck) { 
+            string userName = "";
+            string password = "";
+            string countS = "";
+            int i = 2;
+            for(; ; i++) {
+                if (stringCheck[i] == '*') { i++;break; }
+                countS += stringCheck[i];
+            }int j = i;
+            for (; i <j+ Int32.Parse(countS); i++) {
+                userName += stringCheck[i];
+            }
+            i += 1;countS = string.Empty;
+            for(; ;i++) {
+                if (stringCheck[i] == '*') { i++;break; }
+                countS += stringCheck[i];
+            }j = i;
+            for (; i <j+ Int32.Parse(countS); i++)
+                password += stringCheck[i];
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"INSERT INTO ACCOUNT (USERNAME,PASS) VALUES('{userName}','{password}')";
+            comm = new SqlCommand(sqlString, conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
+        public string GetDataFromDatabase(string currency,string datime) {
+            string sendString = "";
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"SELECT * FROM COINS_DATA WHERE CURRENCY ='{currency}' AND DATE_TIME = '{datime}'";
+            myAdapter = new SqlDataAdapter(sqlString, conn);
+            ds = new DataSet();
+            myAdapter.Fill(ds, "ID");
+            dt = ds.Tables["ID"];
+            conn.Close();
+            return sendString;
+        }
     }
 }

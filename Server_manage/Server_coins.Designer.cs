@@ -32,19 +32,19 @@ namespace Server_manage
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.TextIP = new Guna.UI2.WinForms.Guna2TextBox();
             this.textIFO = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.listClientText = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,15 +73,6 @@ namespace Server_manage
             this.label5.Size = new System.Drawing.Size(87, 21);
             this.label5.TabIndex = 7;
             this.label5.Text = "TCP/Server";
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::Server_manage.Properties.Resources.Untitled;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(27, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(30, 29);
-            this.panel5.TabIndex = 7;
             // 
             // guna2ControlBox2
             // 
@@ -157,8 +148,8 @@ namespace Server_manage
             this.textIFO.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.textIFO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textIFO.FocusedState.Parent = this.textIFO;
-            this.textIFO.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textIFO.ForeColor = System.Drawing.Color.Black;
+            this.textIFO.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.textIFO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
             this.textIFO.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textIFO.HoverState.Parent = this.textIFO;
             this.textIFO.Location = new System.Drawing.Point(89, 165);
@@ -186,35 +177,35 @@ namespace Server_manage
             this.label2.TabIndex = 23;
             this.label2.Text = "Server";
             // 
-            // guna2TextBox1
+            // listClientText
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2TextBox1.BorderRadius = 11;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(569, 165);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2TextBox1.PlaceholderText = "ListClient";
-            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(182, 324);
-            this.guna2TextBox1.TabIndex = 24;
+            this.listClientText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.listClientText.BorderRadius = 11;
+            this.listClientText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listClientText.DefaultText = "";
+            this.listClientText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.listClientText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.listClientText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.listClientText.DisabledState.Parent = this.listClientText;
+            this.listClientText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.listClientText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.listClientText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.listClientText.FocusedState.Parent = this.listClientText;
+            this.listClientText.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.listClientText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.listClientText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.listClientText.HoverState.Parent = this.listClientText;
+            this.listClientText.Location = new System.Drawing.Point(569, 165);
+            this.listClientText.Multiline = true;
+            this.listClientText.Name = "listClientText";
+            this.listClientText.PasswordChar = '\0';
+            this.listClientText.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.listClientText.PlaceholderText = "ListClient.....";
+            this.listClientText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.listClientText.SelectedText = "";
+            this.listClientText.ShadowDecoration.Parent = this.listClientText;
+            this.listClientText.Size = new System.Drawing.Size(182, 324);
+            this.listClientText.TabIndex = 24;
             // 
             // label1
             // 
@@ -245,7 +236,7 @@ namespace Server_manage
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label4.Location = new System.Drawing.Point(578, 119);
+            this.label4.Location = new System.Drawing.Point(564, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 28);
@@ -297,6 +288,16 @@ namespace Server_manage
             this.btnClose.Size = new System.Drawing.Size(105, 43);
             this.btnClose.TabIndex = 29;
             this.btnClose.Text = "Close Server";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::Server_manage.Properties.Resources.Untitled;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(27, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 29);
+            this.panel5.TabIndex = 7;
             // 
             // Form1
             // 
@@ -309,7 +310,7 @@ namespace Server_manage
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.listClientText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textIFO);
             this.Controls.Add(this.TextIP);
@@ -336,7 +337,7 @@ namespace Server_manage
         private Guna.UI2.WinForms.Guna2TextBox TextIP;
         private Guna.UI2.WinForms.Guna2TextBox textIFO;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox listClientText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
