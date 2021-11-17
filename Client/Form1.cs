@@ -36,22 +36,7 @@ namespace Client
             }
         }
 
-        private void CreateClient_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(TextIP.Text))
-            {
-                Client = new SimpleTcpClient($"{TextIP.Text}:{TextPort.Text}");
-                Client.Events.Connected += Events_Connected;
-                Client.Events.Disconnected += Events_Disconnected;
-                Client.Events.DataReceived += Events_DaraReceived;
-                ConnectAgain.Enabled = true;
-                CreateClient.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("IP server is null", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
        
         private void Events_DaraReceived(object sender, DataReceivedEventArgs e)
@@ -123,7 +108,7 @@ namespace Client
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
+        {   
 
         }
 
@@ -142,24 +127,37 @@ namespace Client
             Control.CheckForIllegalCrossThreadCalls = false;
         }
 
-        private void CreateAccount_Click(object sender, EventArgs e)
+        
+
+        private void CreateClient_Click_2(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(NewUser.Text) && !string.IsNullOrEmpty(NewPass.Text) && !string.IsNullOrEmpty(RePass.Text))
+
+        }
+
+        private void CreateClient_Click_3(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextIP.Text))
             {
-                if(RePass.Text == NewPass.Text)
-                {
-                    Client.Send($"Create:{NewUser.Text} % {NewPass.Text}");
-                    MessageFromServer.Text += $"Me:Create:{NewUser.Text}%{NewPass.Text}{Environment.NewLine}";
-                }
-                else
-                {
-                    MessageBox.Show("Re Pass is invalid, please try again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                Client = new SimpleTcpClient($"{TextIP.Text}:{TextPort.Text}");
+                Client.Events.Connected += Events_Connected;
+                Client.Events.Disconnected += Events_Disconnected;
+                Client.Events.DataReceived += Events_DaraReceived;
+                CreateClient.Enabled = false;
             }
             else
             {
-                MessageBox.Show("Input is empty!","Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("IP server is null", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ToggleSwitch2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
