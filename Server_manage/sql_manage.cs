@@ -143,11 +143,23 @@ namespace Server_manage
             string sendString = "";
             conn = new SqlConnection(conStr);
             conn.Open();
-            string sqlString = $"SELECT * FROM COINS_DATA WHERE CURRENCY ='{currency}' AND DATE_TIME = '{datime}'";
+            string sqlString = "";
+            if (datime != "") {
+                sendString = "6";
+                sqlString = $"SELECT * FROM COINS_DATA WHERE CURRENCY LIKE'%{currency}%' AND DATE_TIME = '{datime}'";
+            }
+            else {
+                sendString = "5";
+                sqlString = $"SELECT * FROM COINS_DATA WHERE CURRENCY LIKE'%{currency}%'";
+            }
             myAdapter = new SqlDataAdapter(sqlString, conn);
             ds = new DataSet();
             myAdapter.Fill(ds, "ID");
             dt = ds.Tables["ID"];
+            for(int i = 0; i < dt.Rows.Count; i++) {
+                sendString += $"{dt.Rows[i]["CURRENCY"].ToString()}*{dt.Rows[i]["BUY_CASH"].ToString()}*" +
+                            $"{dt.Rows[i]["BUY_TRANSFER"].ToString()}*{dt.Rows[i]["SELL"].ToString()}*{dt.Rows[i]["DATE_TIME"].ToString()}*|";
+            }
             conn.Close();
             return sendString;
         }

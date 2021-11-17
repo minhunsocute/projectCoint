@@ -63,6 +63,26 @@ namespace Server_manage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm {
+            get {
+                object obj = ResourceManager.GetObject("dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptop {
+            get {
+                object obj = ResourceManager.GetObject("laptop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngwing_com {
             get {
                 object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);

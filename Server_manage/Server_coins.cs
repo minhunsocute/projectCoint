@@ -25,8 +25,6 @@ namespace Server_manage
         private void autoDataToSql(){
             sql_manage.updateData();
         }
-        
-
         private void Form1_Load(object sender, EventArgs e)
         {
             //           autoDataToSql();   
@@ -53,9 +51,9 @@ namespace Server_manage
             else
                 MessageBox.Show("textIp is NULL","Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
-
         private void checkString(string s,DataReceivedEventArgs e) {
             sql_manage f = new sql_manage();
+            textIFO.Text += $"{e.IpPort}:{s}{Environment.NewLine}";
             if (s[0] == '1') {
                 if (f.checkLogin(s) == -1)
                     server.Send(e.IpPort, "1Success");//Đăng nhập thành công
@@ -70,6 +68,10 @@ namespace Server_manage
                     server.Send(e.IpPort, "4Success");//Đăng ký thành công
                 }
             }
+            else if (s[0] == '3'){ //In ra toàn bộ giá trị của bảng 
+                string sendString = f.GetDataFromDatabase("", "");
+                server.Send(e.IpPort,sendString);
+            }
         }
         private void Events_DataRecceived(object sender, DataReceivedEventArgs e){
             checkString(Encoding.UTF8.GetString(e.Data), e);
@@ -77,6 +79,7 @@ namespace Server_manage
 
         private void Events_ClientDisconnected(object sender, ClientDisconnectedEventArgs e){
             listClientText.Text = string.Empty;
+            textIFO.Text += $"{e.IpPort}:Disconnected{Environment.NewLine}";
             int i = 0;
             foreach(string item in listClient) { 
                 if(item == e.IpPort) {
@@ -88,14 +91,12 @@ namespace Server_manage
             foreach (string item in listClient)
                 listClientText.Text += $"{item}{Environment.NewLine}";
         }
-
         private void Events_ClientConnected(object sender, ClientConnectedEventArgs e){
+            textIFO.Text += $"{e.IpPort}:Connected{Environment.NewLine  }";
             listClient.Add(e.IpPort);
             listClientText.Text += $"{e.IpPort}{Environment.NewLine}";
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
+        private void btnClose_Click(object sender, EventArgs e) { 
             
         }
         //https://stackoverflow.com/questions/41683798/convert-json-from-get-request-into-text-boxes-in-c-sharp-winforms-application

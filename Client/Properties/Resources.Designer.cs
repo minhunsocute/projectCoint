@@ -93,6 +93,26 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_circle {
+            get {
+                object obj = ResourceManager.GetObject("arrow-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Chart {
             get {
                 object obj = ResourceManager.GetObject("Chart", resourceCulture);
@@ -116,6 +136,16 @@ namespace Client.Properties {
         internal static System.Drawing.Bitmap dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm {
             get {
                 object obj = ResourceManager.GetObject("dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifier {
+            get {
+                object obj = ResourceManager.GetObject("magnifier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,17 +44,22 @@ namespace Server_manage
             this.label4 = new System.Windows.Forms.Label();
             this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(85)))), ((int)(((byte)(204)))));
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.guna2ControlBox2);
             this.panel3.Controls.Add(this.guna2ControlBox1);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -78,7 +83,7 @@ namespace Server_manage
             // 
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox2.Location = new System.Drawing.Point(683, 0);
@@ -90,7 +95,7 @@ namespace Server_manage
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(723, 0);
@@ -106,38 +111,38 @@ namespace Server_manage
             // TextIP
             // 
             this.TextIP.BackColor = System.Drawing.Color.Transparent;
-            this.TextIP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextIP.BorderColor = System.Drawing.Color.Lime;
             this.TextIP.BorderRadius = 8;
+            this.TextIP.BorderThickness = 0;
             this.TextIP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextIP.DefaultText = "192.168.56.1:9000";
+            this.TextIP.DefaultText = "192.168.1.13:9000";
             this.TextIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TextIP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TextIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextIP.DisabledState.Parent = this.TextIP;
             this.TextIP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextIP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.TextIP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextIP.FocusedState.Parent = this.TextIP;
             this.TextIP.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.TextIP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextIP.ForeColor = System.Drawing.Color.Black;
             this.TextIP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextIP.HoverState.Parent = this.TextIP;
-            this.TextIP.Location = new System.Drawing.Point(89, 100);
+            this.TextIP.Location = new System.Drawing.Point(118, 19);
             this.TextIP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TextIP.Name = "TextIP";
             this.TextIP.PasswordChar = '\0';
-            this.TextIP.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextIP.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TextIP.PlaceholderText = "IP/Port.......";
             this.TextIP.SelectedText = "";
-            this.TextIP.SelectionStart = 17;
             this.TextIP.ShadowDecoration.Parent = this.TextIP;
             this.TextIP.Size = new System.Drawing.Size(459, 47);
             this.TextIP.TabIndex = 21;
             // 
             // textIFO
             // 
-            this.textIFO.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.textIFO.BorderColor = System.Drawing.Color.Black;
             this.textIFO.BorderRadius = 11;
+            this.textIFO.BorderThickness = 2;
             this.textIFO.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textIFO.DefaultText = "";
             this.textIFO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -145,18 +150,18 @@ namespace Server_manage
             this.textIFO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textIFO.DisabledState.Parent = this.textIFO;
             this.textIFO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textIFO.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.textIFO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textIFO.FocusedState.Parent = this.textIFO;
             this.textIFO.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.textIFO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.textIFO.ForeColor = System.Drawing.Color.Black;
             this.textIFO.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textIFO.HoverState.Parent = this.textIFO;
-            this.textIFO.Location = new System.Drawing.Point(89, 165);
+            this.textIFO.Location = new System.Drawing.Point(27, 165);
+            this.textIFO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textIFO.Multiline = true;
             this.textIFO.Name = "textIFO";
             this.textIFO.PasswordChar = '\0';
-            this.textIFO.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.textIFO.PlaceholderForeColor = System.Drawing.Color.Black;
             this.textIFO.PlaceholderText = "Server.....";
             this.textIFO.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textIFO.SelectedText = "";
@@ -170,7 +175,7 @@ namespace Server_manage
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 51);
+            this.label2.Location = new System.Drawing.Point(312, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 30);
@@ -179,7 +184,7 @@ namespace Server_manage
             // 
             // listClientText
             // 
-            this.listClientText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.listClientText.BorderColor = System.Drawing.Color.Black;
             this.listClientText.BorderRadius = 11;
             this.listClientText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.listClientText.DefaultText = "";
@@ -188,23 +193,23 @@ namespace Server_manage
             this.listClientText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.listClientText.DisabledState.Parent = this.listClientText;
             this.listClientText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.listClientText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.listClientText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.listClientText.FocusedState.Parent = this.listClientText;
             this.listClientText.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.listClientText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.listClientText.ForeColor = System.Drawing.Color.Black;
             this.listClientText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.listClientText.HoverState.Parent = this.listClientText;
-            this.listClientText.Location = new System.Drawing.Point(569, 165);
+            this.listClientText.Location = new System.Drawing.Point(517, 165);
+            this.listClientText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listClientText.Multiline = true;
             this.listClientText.Name = "listClientText";
             this.listClientText.PasswordChar = '\0';
-            this.listClientText.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.listClientText.PlaceholderForeColor = System.Drawing.Color.Black;
             this.listClientText.PlaceholderText = "ListClient.....";
             this.listClientText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.listClientText.SelectedText = "";
             this.listClientText.ShadowDecoration.Parent = this.listClientText;
-            this.listClientText.Size = new System.Drawing.Size(182, 324);
+            this.listClientText.Size = new System.Drawing.Size(234, 324);
             this.listClientText.TabIndex = 24;
             // 
             // label1
@@ -212,7 +217,8 @@ namespace Server_manage
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label1.Location = new System.Drawing.Point(2, 109);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 28);
@@ -224,19 +230,21 @@ namespace Server_manage
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label3.Location = new System.Drawing.Point(2, 173);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(36, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 28);
+            this.label3.Size = new System.Drawing.Size(82, 28);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Acti";
+            this.label3.Text = "Activity:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label4.Location = new System.Drawing.Point(564, 119);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(525, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 28);
@@ -255,10 +263,11 @@ namespace Server_manage
             this.CreateClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.CreateClient.DisabledState.Parent = this.CreateClient;
             this.CreateClient.FillColor = System.Drawing.Color.Turquoise;
+            this.CreateClient.FillColor2 = System.Drawing.Color.Gray;
             this.CreateClient.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CreateClient.ForeColor = System.Drawing.Color.White;
             this.CreateClient.HoverState.Parent = this.CreateClient;
-            this.CreateClient.Location = new System.Drawing.Point(312, 505);
+            this.CreateClient.Location = new System.Drawing.Point(530, 505);
             this.CreateClient.Name = "CreateClient";
             this.CreateClient.ShadowDecoration.Parent = this.CreateClient;
             this.CreateClient.Size = new System.Drawing.Size(105, 43);
@@ -278,11 +287,11 @@ namespace Server_manage
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.DisabledState.Parent = this.btnClose;
             this.btnClose.FillColor = System.Drawing.Color.CadetBlue;
-            this.btnClose.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnClose.FillColor2 = System.Drawing.Color.Black;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.Location = new System.Drawing.Point(443, 505);
+            this.btnClose.Location = new System.Drawing.Point(646, 505);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(105, 43);
@@ -290,30 +299,63 @@ namespace Server_manage
             this.btnClose.Text = "Close Server";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            this.panel1.Controls.Add(this.TextIP);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(763, 80);
+            this.panel1.TabIndex = 30;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Server_manage.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(27, 503);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(54, 55);
+            this.panel2.TabIndex = 31;
+            // 
             // panel5
             // 
-            this.panel5.BackgroundImage = global::Server_manage.Properties.Resources.Untitled;
+            this.panel5.BackgroundImage = global::Server_manage.Properties.Resources.laptop;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Location = new System.Drawing.Point(27, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(30, 29);
             this.panel5.TabIndex = 7;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(85)))), ((int)(((byte)(217)))));
+            this.label6.Location = new System.Drawing.Point(86, 530);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 28);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "HCMUS";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(49)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(763, 570);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.CreateClient);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.listClientText);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textIFO);
-            this.Controls.Add(this.TextIP);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -321,6 +363,8 @@ namespace Server_manage
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,6 +387,9 @@ namespace Server_manage
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientTileButton CreateClient;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnClose;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }
 
