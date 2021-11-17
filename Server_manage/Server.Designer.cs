@@ -1,7 +1,7 @@
 ﻿
 namespace Server_manage
 {
-    partial class Form1
+    partial class Server
     {
         /// <summary>
         /// Required designer variable.
