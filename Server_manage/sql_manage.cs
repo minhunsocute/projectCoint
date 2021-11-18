@@ -76,7 +76,7 @@ namespace Server_manage
                 int size = content.ToString().Length;
                 string jsonString = content.ToString();
                 Root value = JsonConvert.DeserializeObject<Root>(jsonString);
-                //Console.WriteLine(value.results.Count);
+                //Console.WriteLine(value.results.Count);   
                 /*foreach (Result item in value.results)
                 {
                     Console.WriteLine($"Buy_cash:{item.buy_cash}");
@@ -89,10 +89,37 @@ namespace Server_manage
                     SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-DI57MUOG;Initial Catalog=COINS_MANAGE;Integrated Security=True");
                     SqlCommand com;
                     con.Open();
-                    foreach (Result item in value.results) {
-                        string sqlString = $"EXEC INSERT_COINSDATA '{item.currency}',{item.buy_cash.ToString()},{item.buy_transfer.ToString()},{item.sell.ToString()}";
-                        com = new SqlCommand(sqlString, con);
-                        com.ExecuteNonQuery();
+                    DateTime d1 = DateTime.Now;
+                    string sqlString1 = $"SELECT COUNT(*) FROM COINS_DATA WHERE DAY(DATE_TIME) = {d1.Day.ToString()} AND MONTH(DATE_TIME) = {d1.Month.ToString()}" +
+                                        $" AND YEAR(DATE_TIME) = {d1.Year.ToString()}";
+                    com = new SqlCommand(sqlString1, con);
+                    Int32 count = (Int32)com.ExecuteScalar();
+                    if (count == 0) { 
+                        foreach (Result item in value.results) {
+                            string sqlString = $"EXEC INSERT_COINSDATA '{item.currency}',{item.buy_cash.ToString()},{item.buy_transfer.ToString()},{item.sell.ToString()}";
+                            com = new SqlCommand(sqlString, con);
+                            com.ExecuteNonQuery();
+                        }
+                    }
+                    else { 
+                        foreach(Result item in value.results) {
+                            string sqlStringCheck = $"SELECT COUNT(*) FROM COINS_DATA WHERE CURRENCY = '{item.currency}'";
+                            com = new SqlCommand(sqlStringCheck, con);
+                            Int32 count1 = (Int32)com.ExecuteScalar();
+                            if (count1 == 0) {
+                                string sqlString = $"EXEC INSERT_COINSDATA '{item.currency}',{item.buy_cash.ToString()},{item.buy_transfer.ToString()},{item.sell.ToString()}";
+                                com = new SqlCommand(sqlString, con);
+                                com.ExecuteNonQuery();
+                            }
+                            else {
+                                string sqlString = $"UPDATE COINS_DATA SET BUY_CASH = {item.buy_cash.ToString()}, BUY_TRANSFER = {item.buy_transfer.ToString()}, SELL = {item.sell.ToString()}, " +
+                                                $" DATE_TIME = GETDATE() " +
+                                                $" WHERE CURRENCY = '{item.currency}' AND DAY(DATE_TIME) = {d1.Day.ToString()} AND MONTH(DATE_TIME) = {d1.Month.ToString()}" +
+                                                $" AND YEAR(DATE_TIME) = {d1.Year.ToString()}";
+                                com = new SqlCommand(sqlString, con);
+                                com.ExecuteNonQuery();
+                            }
+                        }
                     }
                     con.Close();
                 }
@@ -145,8 +172,17 @@ namespace Server_manage
             conn.Open();
             string sqlString = "";
             if (datime != "") {
-                sendString = "6";
-                sqlString = $"SELECT * FROM COINS_DATA WHERE CURRENCY LIKE'%{currency}%' AND DATE_TIME = '{datime}'";
+                string day = "", year = "", month = "";
+                int i = 0;
+                for (; i < 4; i++) year += datime[i];
+                int j = i + 1; i++;
+                for (; i < j + 2; i++) month += datime[i];
+                i++;
+                for (; i < datime.Length; i++) day += datime[i];
+                sendString = "5";
+                sqlString = $" SELECT * FROM COINS_DATA WHERE CURRENCY LIKE'%{currency}%' " +
+                            $" AND DAY(DATE_TIME) = {day} AND MONTH(DATE_TIME) = {month}" +
+                            $" AND YEAR(DATE_TIME) = {year}";
             }
             else {
                 sendString = "5";

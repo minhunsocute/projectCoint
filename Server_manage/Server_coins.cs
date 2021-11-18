@@ -30,85 +30,22 @@ namespace Server_manage
         private void Form1_Load(object sender, EventArgs e)
         {
             //           autoDataToSql();   
+            sql_manage.updateData();
             listClient = new List<string>();
-        }
+        }   
 
         private void CreateClient_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(TextIP.Text)) {
-                /*try {  
-                    btnClose.Enabled = true;
-                    CreateClient.Enabled = false;
-                    server = new SimpleTcpServer(TextIP.Text);
-                    server.Events.ClientConnected += Events_ClientConnected;
-                    server.Events.ClientDisconnected += Events_ClientDisconnected;
-                    server.Events.DataReceived += Events_DataRecceived;
-                    server.Start();
-                    textIFO.Text += $"Startting .....{Environment.NewLine}";// create new line when have messsage;
-                }
-                catch(Exception ex) {
-                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
                 coneect();
-
+                openServer.Enabled = false;
+                btnClose.Enabled = true;
             }
             else
                 MessageBox.Show("textIp is NULL", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        /*}
-        private void checkString(string s,DataReceivedEventArgs e) {
-            sql_manage f = new sql_manage();
-            textIFO.Text += $"{e.IpPort}:{s}{Environment.NewLine}";
-            if (s[0] == '1') {
-                if (f.checkLogin(s) == -1)
-                    server.Send(e.IpPort, "1Success");//Đăng nhập thành công
-                else
-                    server.Send(e.IpPort, "2Invalid");//Đăng nhập không thành công
-            }
-            else if (s[0] == '2') {
-                if (f.checkLogin(s) == -1)
-                    server.Send(e.IpPort, "3Invalid");//Đăng ký không thành công
-                else {
-                    f.Insert_Account(s);
-                    server.Send(e.IpPort, "4Success");//Đăng ký thành công
-                }
-            }
-            else if (s[0] == '3'){ //In ra toàn bộ giá trị của bảng 
-                string sendString = f.GetDataFromDatabase("", "");
-                server.Send(e.IpPort,sendString);
-            }
-        }
-        private void Events_DataRecceived(object sender, DataReceivedEventArgs e){
-            checkString(Encoding.UTF8.GetString(e.Data), e);
-        }
-
-        private void Events_ClientDisconnected(object sender, ClientDisconnectedEventArgs e){
-            listClientText.Text = string.Empty;
-            textIFO.Text += $"{e.IpPort}:Disconnected{Environment.NewLine}";
-            int i = 0;
-            foreach(string item in listClient) { 
-                if(item == e.IpPort) {
-                    listClient.RemoveAt(i);
-                    break;
-                }
-                i++;
-            }
-            foreach (string item in listClient)
-                listClientText.Text += $"{item}{Environment.NewLine}";
-        }
-        private void Events_ClientConnected(object sender, ClientConnectedEventArgs e){
-            textIFO.Text += $"{e.IpPort}:Connected{Environment.NewLine  }";
-            listClient.Add(e.IpPort);
-            listClientText.Text += $"{e.IpPort}{Environment.NewLine}";
-        }
-        private void btnClose_Click(object sender, EventArgs e) { 
-            
-        }*/
-        //https://stackoverflow.com/questions/41683798/convert-json-from-get-request-into-text-boxes-in-c-sharp-winforms-application
-        
-        
-        
-        
+      
+        int count_time = 0;
         //Xử lý Socket serve
         IPEndPoint IP;
         Socket Server1;
@@ -144,6 +81,16 @@ namespace Server_manage
             });
             Listen.IsBackground = true;
             Listen.Start();
+        }
+
+        //Hàm Kiểm tra client disconnect 
+        bool SocketConnected(Socket s) {
+            bool part1 = s.Poll(1000, SelectMode.SelectRead);
+            bool part2 = (s.Available == 0);
+            if (part1 && part2)
+                return false;
+            else
+                return true;
         }
         //Hàm nhận dữ liệu từ client
         private void Receive(object obj){
@@ -192,6 +139,26 @@ namespace Server_manage
                 string sendString1 = f.GetDataFromDatabase("", "");
                 sendString(clien, sendString1);
             }
+            else if(s[0]=='4')//In ra giá trị của bảng có điều kiện
+            {
+                string currency = "";string date_time = "";
+                int Index = s.IndexOf('@');
+                currency = s.Substring(1, Index - 1);
+                date_time = s.Substring(Index + 1);
+                string sendString1 = "";
+                if (currency == "All")
+                    sendString1 = f.GetDataFromDatabase("", date_time);
+                else
+                    sendString1 = f.GetDataFromDatabase(currency, date_time);
+                sendString(clien, sendString1);
+            }
+            else if (s[0] == '5') { 
+                listClientText.Text = string.Empty;
+                foreach(Socket item in ClientList) {
+                    if (SocketConnected(item))
+                        listClientText.Text += $"{item.RemoteEndPoint.ToString()}{Environment.NewLine}";
+                }
+            }
         }
 
         byte[] Serialize(object obj)
@@ -210,5 +177,36 @@ namespace Server_manage
 
             return formatter.Deserialize(stream);
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            count_time++;
+            if (count_time % 10 == 0) {
+                listClientText.Text = string.Empty;
+                int i = 0;
+                foreach(Socket item in ClientList) {
+                    if (!SocketConnected(item)) { 
+                        textIFO.Text+= $"{item.RemoteEndPoint.ToString()}:Disconnected{Environment.NewLine}";
+                    }
+                    else {
+                        listClientText.Text += $"{item.RemoteEndPoint.ToString()}";  
+                    } 
+                }
+            }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e){
+            openServer.Enabled = true;
+            btnClose.Enabled = false;
+            listClientText.Text = string.Empty;
+            textIFO.Text = string.Empty;
+        }
     }
 }
+//https://stackoverflow.com/questions/41683798/convert-json-from-get-request-into-text-boxes-in-c-sharp-winforms-application
+

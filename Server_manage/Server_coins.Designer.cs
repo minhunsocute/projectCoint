@@ -43,11 +43,12 @@ namespace Server_manage
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.openServer = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +113,7 @@ namespace Server_manage
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(40, 36);
             this.guna2ControlBox1.TabIndex = 0;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // label2
             // 
@@ -137,7 +139,7 @@ namespace Server_manage
             this.TextIP.BorderRadius = 8;
             this.TextIP.BorderThickness = 0;
             this.TextIP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextIP.DefaultText = "192.168.1.13:1111";
+            this.TextIP.DefaultText = "192.168.1.13:9000";
             this.TextIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TextIP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TextIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -260,29 +262,29 @@ namespace Server_manage
             this.label4.TabIndex = 27;
             this.label4.Text = "List Client";
             // 
-            // CreateClient
+            // openServer
             // 
-            this.CreateClient.BorderRadius = 11;
-            this.CreateClient.CheckedState.Parent = this.CreateClient;
-            this.CreateClient.CustomImages.Parent = this.CreateClient;
-            this.CreateClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CreateClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CreateClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CreateClient.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CreateClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CreateClient.DisabledState.Parent = this.CreateClient;
-            this.CreateClient.FillColor = System.Drawing.Color.Turquoise;
-            this.CreateClient.FillColor2 = System.Drawing.Color.Gray;
-            this.CreateClient.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CreateClient.ForeColor = System.Drawing.Color.White;
-            this.CreateClient.HoverState.Parent = this.CreateClient;
-            this.CreateClient.Location = new System.Drawing.Point(530, 505);
-            this.CreateClient.Name = "CreateClient";
-            this.CreateClient.ShadowDecoration.Parent = this.CreateClient;
-            this.CreateClient.Size = new System.Drawing.Size(105, 43);
-            this.CreateClient.TabIndex = 28;
-            this.CreateClient.Text = "Open Server";
-            this.CreateClient.Click += new System.EventHandler(this.CreateClient_Click);
+            this.openServer.BorderRadius = 11;
+            this.openServer.CheckedState.Parent = this.openServer;
+            this.openServer.CustomImages.Parent = this.openServer;
+            this.openServer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.openServer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.openServer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.openServer.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.openServer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.openServer.DisabledState.Parent = this.openServer;
+            this.openServer.FillColor = System.Drawing.Color.Turquoise;
+            this.openServer.FillColor2 = System.Drawing.Color.Gray;
+            this.openServer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.openServer.ForeColor = System.Drawing.Color.White;
+            this.openServer.HoverState.Parent = this.openServer;
+            this.openServer.Location = new System.Drawing.Point(530, 505);
+            this.openServer.Name = "openServer";
+            this.openServer.ShadowDecoration.Parent = this.openServer;
+            this.openServer.Size = new System.Drawing.Size(105, 43);
+            this.openServer.TabIndex = 28;
+            this.openServer.Text = "Open Server";
+            this.openServer.Click += new System.EventHandler(this.CreateClient_Click);
             // 
             // btnClose
             // 
@@ -306,6 +308,7 @@ namespace Server_manage
             this.btnClose.Size = new System.Drawing.Size(105, 43);
             this.btnClose.TabIndex = 29;
             this.btnClose.Text = "Close Server";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel1
             // 
@@ -340,6 +343,11 @@ namespace Server_manage
             this.label6.TabIndex = 32;
             this.label6.Text = "HCMUS";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,7 +358,7 @@ namespace Server_manage
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.CreateClient);
+            this.Controls.Add(this.openServer);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listClientText);
@@ -384,11 +392,12 @@ namespace Server_manage
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2GradientTileButton CreateClient;
+        private Guna.UI2.WinForms.Guna2GradientTileButton openServer;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

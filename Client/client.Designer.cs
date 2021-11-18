@@ -101,6 +101,7 @@ namespace Client
             this.MessageFromServer = new Guna.UI2.WinForms.Guna2TextBox();
             this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnConnect = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.updateText = new System.Windows.Forms.Label();
             this.MainControl.SuspendLayout();
             this.login.SuspendLayout();
             this.LoginPage.SuspendLayout();
@@ -582,7 +583,6 @@ namespace Client
             this.btnCreate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCreate.DisabledState.Parent = this.btnCreate;
-            this.btnCreate.Enabled = false;
             this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(200)))));
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCreate.ForeColor = System.Drawing.Color.White;
@@ -749,6 +749,7 @@ namespace Client
             // show
             // 
             this.show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.show.Controls.Add(this.updateText);
             this.show.Controls.Add(this.btnReset);
             this.show.Controls.Add(this.btnSearch);
             this.show.Controls.Add(this.label17);
@@ -1009,7 +1010,7 @@ namespace Client
             this.dateCheck.BorderThickness = 2;
             this.dateCheck.Checked = true;
             this.dateCheck.CheckedState.Parent = this.dateCheck;
-            this.dateCheck.CustomFormat = "yyyy-MMM-dd";
+            this.dateCheck.CustomFormat = "yyyy-MM-dd";
             this.dateCheck.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
             this.dateCheck.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateCheck.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -1104,6 +1105,7 @@ namespace Client
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(40, 36);
             this.guna2ControlBox1.TabIndex = 0;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2DragControl1
             // 
@@ -1260,6 +1262,19 @@ namespace Client
             this.btnConnect.Text = "Connect";
             this.btnConnect.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
             // 
+            // updateText
+            // 
+            this.updateText.AutoSize = true;
+            this.updateText.BackColor = System.Drawing.Color.Transparent;
+            this.updateText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.updateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
+            this.updateText.Location = new System.Drawing.Point(416, 135);
+            this.updateText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.updateText.Name = "updateText";
+            this.updateText.Size = new System.Drawing.Size(83, 28);
+            this.updateText.TabIndex = 55;
+            this.updateText.Text = "Update:";
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1379,6 +1394,7 @@ namespace Client
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label updateText;
     }
 }
 

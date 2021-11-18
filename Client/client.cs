@@ -20,6 +20,7 @@ namespace Client
     {
         int check = 0;
         SimpleTcpClient Client;
+        int check_LoadCombo = 0;
         public client(){
             CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
@@ -32,52 +33,6 @@ namespace Client
                 MessageFromServer.Text += $"Me:LogIn:{Username.Text}%{Password.Text}{Environment.NewLine}";
             }
         }
-
-
-        private void checkString(string s) {
-            this.Invoke(new Action(() => { 
-                if (s[0] == '1') {
-                    OpenTable();name.Text += Username.Text;
-                    Client.Send("3AllData");
-                }
-                else if (s[0] == '2') {
-                    MessageBox.Show("Login unsuccessful", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (s[0] == '3') {
-                    MessageBox.Show("Registration failed","Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
-                else if (s[0] == '4') {
-                    createPass.Text = string.Empty;
-                    createUser.Text = string.Empty;
-                    creatRePass.Text = string.Empty;
-                    MessageBox.Show("Sign Up Success", "Message", MessageBoxButtons.OK);
-                }
-                else if (s[0] == '5') {
-                    LoadDataGridView(s);
-                }
-                else if (s[0] == '6') { 
-                }
-            }));
-        }
-        private void Events_DataReceived(object sender, DataReceivedEventArgs e){
-            string Str_Check = Encoding.UTF8.GetString(e.Data);
-            checkString(Str_Check);
-        }
-        private void Events_Disconnected(object sender, ClientDisconnectedEventArgs e){
-            try{
-                MessageFromServer.Text += $"Server is disconnected.{Environment.NewLine}";
-            }
-            catch{
-                MessageBox.Show("Server is disconnected", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-
-        }
-
-        private void Events_Connected(object sender, ClientConnectedEventArgs e){
-            MessageFromServer.Text += $"Server is connected.{Environment.NewLine}";
-        }
-
         private void Form1_Load(object sender, EventArgs e){
             btnCreate.Enabled = false;
             btnSignIn.Enabled = false;
@@ -89,13 +44,7 @@ namespace Client
         {
             if (!string.IsNullOrEmpty(TextIP.Text)&&!string.IsNullOrEmpty(TextPort.Text))
             {
-                /*Client = new SimpleTcpClient($"{TextIP.Text}:{TextPort.Text}");
-                Client.Events.Connected += Events_Connected;
-                Client.Events.Disconnected += Events_Disconnected;
-                Client.Events.DataReceived += Events_DataReceived;*/
                 Connect();
-                //btnConnect.Enabled = true;
-                //CreateClient.Enabled = false;
             }
             else
             {
@@ -141,16 +90,26 @@ namespace Client
                     MessageBox.Show("Input is empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }        
+        }
         /// <summary>
         /// Tải dữ liệu cho bảng  
         /// </summary>
         private void LoadComboBox(List<Coins> data) {
             SearchString.Items.Clear();
+            SearchString.Items.Add("All");
+            List<string> stringCheck = new List<string>();
             foreach(Coins item in data) {
-                SearchString.Items.Add(item.Currency);
+                int check = 0;
+                for(int i = 0; i < stringCheck.Count; i++) {
+                    if (stringCheck[i] == item.Currency) { check = -1;break; }
+                }
+                if (check == 0) { 
+                    SearchString.Items.Add(item.Currency);
+                    stringCheck.Add(item.Currency);
+                }
             }
-            SearchString.Text = data[0].Currency;
+            SearchString.Text = "All";
+            check_LoadCombo = 1;
         }
         private void LoadDataGridView(string s) {
             List<Coins> data = ListCoins.Instance.Load(s);
@@ -165,7 +124,10 @@ namespace Client
                     row.Cells[1].Value = item.Date_time;
                     coinsData.Rows.Add(row);
                 }
-                LoadComboBox(data);
+                if(check_LoadCombo==0){
+                    LoadComboBox(data);
+                    updateText.Text += data[data.Count - 1].Date_time.ToString();
+                }
             }));   
         }
         private void OpenTable() { 
@@ -191,6 +153,8 @@ namespace Client
                 MainControl.SelectedTab = MainControl.TabPages["login"];
                 Username.Text = Password.Text = string.Empty;
                 name.Text = "Hello:";
+                check_LoadCombo = 0;
+                updateText.Text = "Update:";
             }));
         }
         private void btnReset_Click(object sender, EventArgs e)
@@ -199,10 +163,8 @@ namespace Client
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            Client1.Send(Serialize($"4{SearchString.Text}@{dateCheck.Text}"));            
         }
-
-
 
 
         // Xử lý Socket
@@ -222,7 +184,6 @@ namespace Client
             }
             catch {
                 MessageBox.Show("Cannot connect to server","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
 
         }
@@ -237,6 +198,12 @@ namespace Client
             }
             catch {
                 MessageBox.Show("Server is Disconnected", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                coinsData.Rows.Clear();
+                ((Control)show).Enabled = false;
+                MainControl.SelectedTab = MainControl.TabPages["login"];
+                btnSignIn.Enabled = false;
+                btnCreate.Enabled = false;
+                CreateClient.Enabled = true;
             }
         }
         private void checkString1(string s) { 
@@ -278,6 +245,10 @@ namespace Client
             BinaryFormatter formatter = new BinaryFormatter();
 
             return formatter.Deserialize(stream);
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e){
+            Client1.Send(Serialize("5Disconnected"));
         }
     }
 }
