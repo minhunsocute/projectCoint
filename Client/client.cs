@@ -78,7 +78,7 @@ namespace Client
             {
                 if ((!string.IsNullOrEmpty(createUser.Text)) && (!string.IsNullOrEmpty(createPass.Text)) && (!string.IsNullOrEmpty(creatRePass.Text))){
                     if (creatRePass.Text.ToString() == createPass.Text.ToString()){
-                        Client.Send(Serialize($"2*{createUser.Text.Length.ToString()}*{createUser.Text}*{createPass.Text.Length.ToString()}*{createPass.Text}"));
+                        Client1.Send(Serialize($"2*{createUser.Text.Length.ToString()}*{createUser.Text}*{createPass.Text.Length.ToString()}*{createPass.Text}"));
                         MessageFromServer.Text += $"Me:Create:{createUser.Text}%{createPass.Text}{Environment.NewLine}";
                     }
                     else{
@@ -178,6 +178,7 @@ namespace Client
                 Client1.Connect(IP);
                 CreateClient.Enabled = false;
                 btnSignIn.Enabled = true;
+                btnCreate.Enabled = true;
                 Thread listen = new Thread(Receive);
                 listen.IsBackground = true;
                 listen.Start();

@@ -71,6 +71,7 @@ namespace Client
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.show = new System.Windows.Forms.TabPage();
+            this.updateText = new System.Windows.Forms.Label();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -101,7 +102,6 @@ namespace Client
             this.MessageFromServer = new Guna.UI2.WinForms.Guna2TextBox();
             this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnConnect = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.updateText = new System.Windows.Forms.Label();
             this.MainControl.SuspendLayout();
             this.login.SuspendLayout();
             this.LoginPage.SuspendLayout();
@@ -218,9 +218,8 @@ namespace Client
             this.label9.Location = new System.Drawing.Point(36, 134);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(161, 28);
+            this.label9.Size = new System.Drawing.Size(0, 28);
             this.label9.TabIndex = 10;
-            this.label9.Text = "MSSV: 20120491";
             // 
             // label8
             // 
@@ -231,9 +230,8 @@ namespace Client
             this.label8.Location = new System.Drawing.Point(36, 93);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 28);
+            this.label8.Size = new System.Drawing.Size(0, 28);
             this.label8.TabIndex = 9;
-            this.label8.Text = "MSSV: 20120340";
             // 
             // panel6
             // 
@@ -720,9 +718,8 @@ namespace Client
             this.label11.Location = new System.Drawing.Point(36, 134);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 28);
+            this.label11.Size = new System.Drawing.Size(0, 28);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Mssv:20120491";
             // 
             // label12
             // 
@@ -733,9 +730,8 @@ namespace Client
             this.label12.Location = new System.Drawing.Point(36, 93);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(148, 28);
+            this.label12.Size = new System.Drawing.Size(0, 28);
             this.label12.TabIndex = 9;
-            this.label12.Text = "Mssv:20120340";
             // 
             // panel7
             // 
@@ -766,6 +762,19 @@ namespace Client
             this.show.Size = new System.Drawing.Size(708, 605);
             this.show.TabIndex = 2;
             this.show.Text = "Coins Table";
+            // 
+            // updateText
+            // 
+            this.updateText.AutoSize = true;
+            this.updateText.BackColor = System.Drawing.Color.Transparent;
+            this.updateText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.updateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
+            this.updateText.Location = new System.Drawing.Point(416, 135);
+            this.updateText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.updateText.Name = "updateText";
+            this.updateText.Size = new System.Drawing.Size(83, 28);
+            this.updateText.TabIndex = 55;
+            this.updateText.Text = "Update:";
             // 
             // btnReset
             // 
@@ -1261,19 +1270,6 @@ namespace Client
             this.btnConnect.TabIndex = 9;
             this.btnConnect.Text = "Connect";
             this.btnConnect.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
-            // 
-            // updateText
-            // 
-            this.updateText.AutoSize = true;
-            this.updateText.BackColor = System.Drawing.Color.Transparent;
-            this.updateText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.updateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
-            this.updateText.Location = new System.Drawing.Point(416, 135);
-            this.updateText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.updateText.Name = "updateText";
-            this.updateText.Size = new System.Drawing.Size(83, 28);
-            this.updateText.TabIndex = 55;
-            this.updateText.Text = "Update:";
             // 
             // client
             // 
