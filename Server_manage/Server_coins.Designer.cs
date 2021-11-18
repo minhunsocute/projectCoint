@@ -32,12 +32,13 @@ namespace Server_manage
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.TextIP = new Guna.UI2.WinForms.Guna2TextBox();
             this.textIFO = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.listClientText = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@ namespace Server_manage
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,6 +79,15 @@ namespace Server_manage
             this.label5.TabIndex = 7;
             this.label5.Text = "TCP/Server";
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::Server_manage.Properties.Resources.laptop;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(27, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 29);
+            this.panel5.TabIndex = 7;
+            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
@@ -104,6 +113,19 @@ namespace Server_manage
             this.guna2ControlBox1.Size = new System.Drawing.Size(40, 36);
             this.guna2ControlBox1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(312, 2);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 30);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Server";
+            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this.panel3;
@@ -115,7 +137,7 @@ namespace Server_manage
             this.TextIP.BorderRadius = 8;
             this.TextIP.BorderThickness = 0;
             this.TextIP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextIP.DefaultText = "192.168.1.13:9000";
+            this.TextIP.DefaultText = "192.168.1.13:1111";
             this.TextIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TextIP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TextIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -168,19 +190,6 @@ namespace Server_manage
             this.textIFO.ShadowDecoration.Parent = this.textIFO;
             this.textIFO.Size = new System.Drawing.Size(459, 324);
             this.textIFO.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(312, 2);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 30);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Server";
             // 
             // listClientText
             // 
@@ -297,7 +306,6 @@ namespace Server_manage
             this.btnClose.Size = new System.Drawing.Size(105, 43);
             this.btnClose.TabIndex = 29;
             this.btnClose.Text = "Close Server";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel1
             // 
@@ -318,15 +326,6 @@ namespace Server_manage
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(54, 55);
             this.panel2.TabIndex = 31;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::Server_manage.Properties.Resources.laptop;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(27, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(30, 29);
-            this.panel5.TabIndex = 7;
             // 
             // label6
             // 
