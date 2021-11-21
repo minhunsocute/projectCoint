@@ -87,7 +87,7 @@ namespace Server_manage
                 }*/
                 if (value.results.Count != 0) {
                     SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-DI57MUOG;Initial Catalog=COINS_MANAGE;Integrated Security=True");
-                    SqlCommand com;
+                    SqlCommand com; 
                     con.Open();
                     DateTime d1 = DateTime.Now;
                     string sqlString1 = $"SELECT COUNT(*) FROM COINS_DATA WHERE DAY(DATE_TIME) = {d1.Day.ToString()} AND MONTH(DATE_TIME) = {d1.Month.ToString()}" +

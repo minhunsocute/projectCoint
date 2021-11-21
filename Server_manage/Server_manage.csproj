@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="json_manage.cs" />
     <Compile Include="Server_coins.cs">
       <SubType>Form</SubType>
     </Compile>

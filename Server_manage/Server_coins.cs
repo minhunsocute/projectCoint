@@ -30,7 +30,7 @@ namespace Server_manage
         private void Form1_Load(object sender, EventArgs e)
         {
             //           autoDataToSql();   
-            sql_manage.updateData();
+            sql_manage.updateData(); // Gọi hàm update dữ liệu
             listClient = new List<string>();
         }   
 

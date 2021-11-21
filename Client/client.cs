@@ -42,8 +42,7 @@ namespace Client
 
         private void CreateClient_Click_3(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(TextIP.Text)&&!string.IsNullOrEmpty(TextPort.Text))
-            {
+            if (!string.IsNullOrEmpty(TextIP.Text)&&!string.IsNullOrEmpty(TextPort.Text)){
                 Connect();
             }
             else
@@ -170,6 +169,7 @@ namespace Client
         // Xử lý Socket
         IPEndPoint IP;
         Socket Client1;
+        // Lấy Ip ở textBox để tạo socket 
 
         void Connect() {
             IP = new IPEndPoint(IPAddress.Parse(TextIP.Text), Int32.Parse(TextPort.Text));
@@ -186,7 +186,6 @@ namespace Client
             catch {
                 MessageBox.Show("Cannot connect to server","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         private void Receive(){
             try {
@@ -219,9 +218,11 @@ namespace Client
                 MessageBox.Show("Registration failed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (s[0] == '4'){
-                createPass.Text = string.Empty;
-                createUser.Text = string.Empty;
-                creatRePass.Text = string.Empty;
+                this.Invoke(new Action(() => {
+                    createPass.Text = string.Empty;
+                    createUser.Text = string.Empty;
+                    creatRePass.Text = string.Empty;
+                }));
                 MessageBox.Show("Sign Up Success", "Message", MessageBoxButtons.OK);
             }
             else if (s[0] == '5'){
