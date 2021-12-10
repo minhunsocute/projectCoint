@@ -20,50 +20,38 @@ namespace Server_manage
     {
         SimpleTcpServer server;
         List<string> listClient = new List<string>();
+        int count_time = 0;
+        //Xử lý Socket serve
+        IPEndPoint IP;
+        Socket Server1;
+        List<Socket> ClientList;
+
         public Form1()
         {
             CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
             btnClose.Enabled = false;
         }
-        //Tạo data tự động lấy từ json mỗi khi mở app
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //           autoDataToSql();   
-            sql_manage.updateData(); // Gọi hàm update dữ liệu
-            listClient = new List<string>();
-        }   
 
-        private void CreateClient_Click(object sender, EventArgs e)
+        #region connect
+        private void coneect()
         {
-            if (!string.IsNullOrEmpty(TextIP.Text)) {
-                coneect();
-                openServer.Enabled = false;
-                btnClose.Enabled = true;
-            }
-            else
-                MessageBox.Show("textIp is NULL", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-      
-        int count_time = 0;
-        //Xử lý Socket serve
-        IPEndPoint IP;
-        Socket Server1;
-        List<Socket> ClientList;
-        //Xử lý server tạo 1 socket để Client kết nối
-        private void coneect() {
             ClientList = new List<Socket>();
-            string textP = "";string textPort = "";
+            string textP = ""; string textPort = "";
             int Index = TextIP.Text.IndexOf(':');
+
             textP = TextIP.Text.Substring(0, Index - 1);
             textPort = TextIP.Text.Substring(Index + 1);
+
             IP = new IPEndPoint(IPAddress.Any, Int32.Parse(textPort));
             Server1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            Server1.Bind(IP);textIFO.Text += "Starting.............";
+            Server1.Bind(IP); textIFO.Text += "Starting.............";
             Thread Listen = new Thread(() =>
             {
-                try {
-                    while (true) {
+                try
+                {
+                    while (true)
+                    {
                         Server1.Listen(100);
                         Socket clien = Server1.Accept();
                         ClientList.Add(clien);
@@ -74,7 +62,8 @@ namespace Server_manage
                         rec.Start(clien);
                     }
                 }
-                catch{
+                catch
+                {
                     IP = new IPEndPoint(IPAddress.Parse(textP), Int32.Parse(textPort));
                     Server1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 }
@@ -84,7 +73,8 @@ namespace Server_manage
         }
 
         //Hàm Kiểm tra client disconnect 
-        bool SocketConnected(Socket s) {
+        bool SocketConnected(Socket s)
+        {
             bool part1 = s.Poll(1000, SelectMode.SelectRead);
             bool part2 = (s.Available == 0);
             if (part1 && part2)
@@ -92,11 +82,63 @@ namespace Server_manage
             else
                 return true;
         }
+        #endregion
+
+        #region LoadForm
+        private void ThreadUpdataData()
+        {
+            sql_manage.updateData();
+            Thread.Sleep(30);
+            sql_manage.updateData();
+        }
+
+        //Tạo data tự động lấy từ json mỗi khi mở app
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //sql_manage.updateData(); // Gọi hàm update dữ liệu
+            listClient = new List<string>();
+            Thread trd = new Thread(new ThreadStart(ThreadUpdataData));
+            trd.Start();
+            trd.Join();
+        }
+
+        #endregion
+
+        #region event click 
+        private void CreateClient_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextIP.Text)) {
+                coneect();
+                openServer.Enabled = false;
+                btnClose.Enabled = true;
+            }
+            else
+                MessageBox.Show("textIp is NULL", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            openServer.Enabled = true;
+            btnClose.Enabled = false;
+            listClientText.Text = string.Empty;
+            textIFO.Text = string.Empty;
+        }
+        #endregion
+
+        #region send and rec data
         //Hàm nhận dữ liệu từ client
-        private void Receive(object obj){
+        private void Receive(object obj)
+        {
             Socket clien = (Socket)obj;
-            try {
-                while (true) {
+            try
+            {
+                while (true)
+                {
                     byte[] data = new byte[1024 * 5000];
                     clien.Receive(data);
                     string mess = (string)Deserialize(data);
@@ -107,14 +149,20 @@ namespace Server_manage
             catch { }
         }
         //Hàm gửi Dữ liệu cho client 
-        private void sendString(Socket clien,string s) { 
-            foreach(Socket item in ClientList) {
-                if (item.RemoteEndPoint.ToString() == clien.RemoteEndPoint.ToString()) { 
+        private void sendString(Socket clien, string s)
+        {
+            foreach (Socket item in ClientList)
+            {
+                if (item.RemoteEndPoint.ToString() == clien.RemoteEndPoint.ToString())
+                {
                     clien.Send(Serialize(s));
                     break;
                 }
             }
         }
+        #endregion
+
+        #region checkString
         //Hàm kiểm tra dữ liệu để server lấy dữ liệu và gửi cho client phù hợp với yêu cầu của client
         private void checkString1(string s,Socket clien) {
             sql_manage f = new sql_manage();
@@ -160,7 +208,9 @@ namespace Server_manage
                 }
             }
         }
+        #endregion
 
+        #region change byte array to string and string to byte array
         byte[] Serialize(object obj)
         {
             MemoryStream stream = new MemoryStream();
@@ -177,6 +227,9 @@ namespace Server_manage
 
             return formatter.Deserialize(stream);
         }
+        #endregion
+
+        #region timer tick
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -194,18 +247,8 @@ namespace Server_manage
                 }
             }
         }
+        #endregion
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e){
-            openServer.Enabled = true;
-            btnClose.Enabled = false;
-            listClientText.Text = string.Empty;
-            textIFO.Text = string.Empty;
-        }
     }
 }
 //https://stackoverflow.com/questions/41683798/convert-json-from-get-request-into-text-boxes-in-c-sharp-winforms-application

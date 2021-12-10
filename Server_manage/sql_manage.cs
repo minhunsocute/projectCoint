@@ -15,6 +15,7 @@ namespace Server_manage
 {
     public class sql_manage
     {
+        
         private string conStr = @"Data Source=LAPTOP-DI57MUOG;Initial Catalog=COINS_MANAGE;Integrated Security=True";
         private SqlConnection conn;
         private SqlDataAdapter myAdapter;
@@ -23,25 +24,32 @@ namespace Server_manage
         private DataTable dt;
 
         //Hàm kiểm tra login thành công nếu như hàm trả về -1 tức là client đã đăng nhập thành công bằng 0 thì ngược lại
-        public int checkLogin(string stringCheck) {
+        #region check Sign in and sign up
+        public int checkLogin(string stringCheck)
+        {
             //1*4*hung*8*20112002
             string userName = "";
             string password = "";
             string countS = "";
             int i = 2;
-            for(; ; i++) {
-                if (stringCheck[i] == '*') { i++;break; }
+            for (; ; i++)
+            {
+                if (stringCheck[i] == '*') { i++; break; }
                 countS += stringCheck[i];
-            }int j = i;
-            for (; i <j+ Int32.Parse(countS); i++) {
+            }
+            int j = i;
+            for (; i < j + Int32.Parse(countS); i++)
+            {
                 userName += stringCheck[i];
             }
-            i += 1;countS = string.Empty;
-            for(; ;i++) {
-                if (stringCheck[i] == '*') { i++;break; }
+            i += 1; countS = string.Empty;
+            for (; ; i++)
+            {
+                if (stringCheck[i] == '*') { i++; break; }
                 countS += stringCheck[i];
-            }j = i;
-            for (; i <j+ Int32.Parse(countS); i++)
+            }
+            j = i;
+            for (; i < j + Int32.Parse(countS); i++)
                 password += stringCheck[i];
             conn = new SqlConnection(conStr);
             conn.Open();
@@ -53,6 +61,9 @@ namespace Server_manage
             conn.Close();
             return 0;
         }
+        #endregion
+
+        #region get data from web json
         private static string returnApiString()
         {
             WebClient client = new WebClient();
@@ -65,9 +76,9 @@ namespace Server_manage
             string s = returnApiString();
             var url = "https://vapi.vnappmob.com/api/v2/exchange_rate/vcb";
             var apiKey = s.Substring(12, s.IndexOf('}') - 13);
-            //"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzgzNzAyMDQsImlhdCI6MTYzNzA3NDIwNCwic2NvcGUiOiJleGNoYW5nZV9yYXRlIiwicGVybWlzc2lvbiI6MH0.oeSBlDDMDYab-wG9gmUQuNHHWM_xaLvaQzjRKmPR0Dc";
             var encodedKey = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(apiKey));
-            using (var client = new HttpClient()){
+            using (var client = new HttpClient())
+            {
                 var request = new HttpRequestMessage(HttpMethod.Get, url);
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 request.Headers.Add("Authorization", $"Basic {apiKey}");
@@ -76,42 +87,40 @@ namespace Server_manage
                 int size = content.ToString().Length;
                 string jsonString = content.ToString();
                 Root value = JsonConvert.DeserializeObject<Root>(jsonString);
-                //Console.WriteLine(value.results.Count);   
-                /*foreach (Result item in value.results)
+                if (value.results.Count != 0)
                 {
-                    Console.WriteLine($"Buy_cash:{item.buy_cash}");
-                    Console.WriteLine($"Buy_transfer:{item.buy_transfer}");
-                    Console.WriteLine($"Currency:{item.currency}");
-                    Console.WriteLine($"Sell:{item.sell}");
-                    Console.WriteLine("-----------------------------");
-                }*/
-                if (value.results.Count != 0) {
                     SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-DI57MUOG;Initial Catalog=COINS_MANAGE;Integrated Security=True");
-                    SqlCommand com; 
+                    SqlCommand com;
                     con.Open();
                     DateTime d1 = DateTime.Now;
                     string sqlString1 = $"SELECT COUNT(*) FROM COINS_DATA WHERE DAY(DATE_TIME) = {d1.Day.ToString()} AND MONTH(DATE_TIME) = {d1.Month.ToString()}" +
                                         $" AND YEAR(DATE_TIME) = {d1.Year.ToString()}";
                     com = new SqlCommand(sqlString1, con);
                     Int32 count = (Int32)com.ExecuteScalar();
-                    if (count == 0) { 
-                        foreach (Result item in value.results) {
+                    if (count == 0)
+                    {
+                        foreach (Result item in value.results)
+                        {
                             string sqlString = $"EXEC INSERT_COINSDATA '{item.currency}',{item.buy_cash.ToString()},{item.buy_transfer.ToString()},{item.sell.ToString()}";
                             com = new SqlCommand(sqlString, con);
                             com.ExecuteNonQuery();
                         }
                     }
-                    else { 
-                        foreach(Result item in value.results) {
+                    else
+                    {
+                        foreach (Result item in value.results)
+                        {
                             string sqlStringCheck = $"SELECT COUNT(*) FROM COINS_DATA WHERE CURRENCY = '{item.currency}'";
                             com = new SqlCommand(sqlStringCheck, con);
                             Int32 count1 = (Int32)com.ExecuteScalar();
-                            if (count1 == 0) {
+                            if (count1 == 0)
+                            {
                                 string sqlString = $"EXEC INSERT_COINSDATA '{item.currency}',{item.buy_cash.ToString()},{item.buy_transfer.ToString()},{item.sell.ToString()}";
                                 com = new SqlCommand(sqlString, con);
                                 com.ExecuteNonQuery();
                             }
-                            else {
+                            else
+                            {
                                 string sqlString = $"UPDATE COINS_DATA SET BUY_CASH = {item.buy_cash.ToString()}, BUY_TRANSFER = {item.buy_transfer.ToString()}, SELL = {item.sell.ToString()}, " +
                                                 $" DATE_TIME = GETDATE() " +
                                                 $" WHERE CURRENCY = '{item.currency}' AND DAY(DATE_TIME) = {d1.Day.ToString()} AND MONTH(DATE_TIME) = {d1.Month.ToString()}" +
@@ -125,53 +134,16 @@ namespace Server_manage
                 }
             }
         }
-        public class Result{
-            public double buy_cash { get; set; }
-            public double buy_transfer { get; set; }
-            public string currency { get; set; }
-            public double sell { get; set; }
-        }
-        //List<Object>
-        public class Root{
-            public List<Result> results { get; set; }
-            //private List<Result> esults { get; set; }
-        }
-        public static void updateData() {
-            var task = GetFromCompaniesHouse();
-        }
-        //INSERT INTO ACCOUNT TABLE
-        public void Insert_Account(string stringCheck) { 
-            string userName = "";
-            string password = "";
-            string countS = "";
-            int i = 2;
-            for(; ; i++) {
-                if (stringCheck[i] == '*') { i++;break; }
-                countS += stringCheck[i];
-            }int j = i;
-            for (; i <j+ Int32.Parse(countS); i++) {
-                userName += stringCheck[i];
-            }
-            i += 1;countS = string.Empty;
-            for(; ;i++) {
-                if (stringCheck[i] == '*') { i++;break; }
-                countS += stringCheck[i];
-            }j = i;
-            for (; i <j+ Int32.Parse(countS); i++)
-                password += stringCheck[i];
-            conn = new SqlConnection(conStr);
-            conn.Open();
-            string sqlString = $"INSERT INTO ACCOUNT (USERNAME,PASS) VALUES('{userName}','{password}')";
-            comm = new SqlCommand(sqlString, conn);
-            comm.ExecuteNonQuery();
-            conn.Close();
-        }
-        public string GetDataFromDatabase(string currency,string datime) {
+        // Get data from sql 
+        #region getdata from sql
+        public string GetDataFromDatabase(string currency, string datime)
+        {
             string sendString = "";
             conn = new SqlConnection(conStr);
             conn.Open();
             string sqlString = "";
-            if (datime != "") {
+            if (datime != "")
+            {
                 string day = "", year = "", month = "";
                 int i = 0;
                 for (; i < 4; i++) year += datime[i];
@@ -184,7 +156,8 @@ namespace Server_manage
                             $" AND DAY(DATE_TIME) = {day} AND MONTH(DATE_TIME) = {month}" +
                             $" AND YEAR(DATE_TIME) = {year}";
             }
-            else {
+            else
+            {
                 sendString = "5";
                 sqlString = $"SELECT * FROM COINS_DATA WHERE CURRENCY LIKE'%{currency}%'";
             }
@@ -192,12 +165,73 @@ namespace Server_manage
             ds = new DataSet();
             myAdapter.Fill(ds, "ID");
             dt = ds.Tables["ID"];
-            for(int i = 0; i < dt.Rows.Count; i++) {
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
                 sendString += $"{dt.Rows[i]["CURRENCY"].ToString()}*{dt.Rows[i]["BUY_CASH"].ToString()}*" +
                             $"{dt.Rows[i]["BUY_TRANSFER"].ToString()}*{dt.Rows[i]["SELL"].ToString()}*{dt.Rows[i]["DATE_TIME"].ToString()}*|";
             }
             conn.Close();
             return sendString;
         }
+        #endregion
+        public static void updateData()
+        {
+            var task = GetFromCompaniesHouse();
+        }
+
+        #endregion
+
+        #region class result and root result 
+        public class Result
+        {
+            public double buy_cash { get; set; }
+            public double buy_transfer { get; set; }
+            public string currency { get; set; }
+            public double sell { get; set; }
+        }
+        //List<Object>
+        public class Root
+        {
+            public List<Result> results { get; set; }
+            //private List<Result> esults { get; set; }
+        }
+        #endregion
+       
+        #region insert Account
+        //INSERT INTO ACCOUNT TABLE
+        public void Insert_Account(string stringCheck)
+        {
+            string userName = "";
+            string password = "";
+            string countS = "";
+            int i = 2;
+            for (; ; i++)
+            {
+                if (stringCheck[i] == '*') { i++; break; }
+                countS += stringCheck[i];
+            }
+            int j = i;
+            for (; i < j + Int32.Parse(countS); i++)
+            {
+                userName += stringCheck[i];
+            }
+            i += 1; countS = string.Empty;
+            for (; ; i++)
+            {
+                if (stringCheck[i] == '*') { i++; break; }
+                countS += stringCheck[i];
+            }
+            j = i;
+            for (; i < j + Int32.Parse(countS); i++)
+                password += stringCheck[i];
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"INSERT INTO ACCOUNT (USERNAME,PASS) VALUES('{userName}','{password}')";
+            comm = new SqlCommand(sqlString, conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
+        #endregion
+        
     }
 }

@@ -77,7 +77,7 @@ namespace Client
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
             this.coinsData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -205,7 +205,7 @@ namespace Client
             this.label7.Location = new System.Drawing.Point(14, 40);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(261, 32);
+            this.label7.Size = new System.Drawing.Size(260, 32);
             this.label7.TabIndex = 8;
             this.label7.Text = "ĐỒ ÁN TỶ GIÁ TIỀN TỆ";
             // 
@@ -705,7 +705,7 @@ namespace Client
             this.label10.Location = new System.Drawing.Point(14, 40);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(261, 32);
+            this.label10.Size = new System.Drawing.Size(260, 32);
             this.label10.TabIndex = 8;
             this.label10.Text = "ĐỒ ÁN TỶ GIÁ TIỀN TỆ";
             // 
@@ -751,7 +751,7 @@ namespace Client
             this.show.Controls.Add(this.label17);
             this.show.Controls.Add(this.label16);
             this.show.Controls.Add(this.name);
-            this.show.Controls.Add(this.guna2ImageButton1);
+            this.show.Controls.Add(this.btnLogout);
             this.show.Controls.Add(this.coinsData);
             this.show.Controls.Add(this.SearchString);
             this.show.Controls.Add(this.guna2CustomGradientPanel7);
@@ -857,27 +857,27 @@ namespace Client
             this.name.Location = new System.Drawing.Point(153, 73);
             this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(78, 32);
+            this.name.Size = new System.Drawing.Size(77, 32);
             this.name.TabIndex = 50;
             this.name.Text = "Hello:";
             // 
-            // guna2ImageButton1
+            // btnLogout
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::Client.Properties.Resources.back;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(659, 6);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(43, 41);
-            this.guna2ImageButton1.TabIndex = 49;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.btnLogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.CheckedState.Parent = this.btnLogout;
+            this.btnLogout.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.HoverState.Parent = this.btnLogout;
+            this.btnLogout.Image = global::Client.Properties.Resources.back;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnLogout.ImageRotate = 0F;
+            this.btnLogout.Location = new System.Drawing.Point(659, 6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.PressedState.Parent = this.btnLogout;
+            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
+            this.btnLogout.Size = new System.Drawing.Size(43, 41);
+            this.btnLogout.TabIndex = 49;
+            this.btnLogout.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // coinsData
             // 
@@ -1384,7 +1384,7 @@ namespace Client
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnLogout;
         private System.Windows.Forms.Label name;
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
