@@ -35,7 +35,6 @@ namespace Server_manage
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.TextIP = new Guna.UI2.WinForms.Guna2TextBox();
             this.textIFO = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,18 +48,18 @@ namespace Server_manage
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(85)))), ((int)(((byte)(204)))));
+            this.panel3.BackColor = System.Drawing.Color.Teal;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.guna2ControlBox2);
             this.panel3.Controls.Add(this.guna2ControlBox1);
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -95,7 +94,7 @@ namespace Server_manage
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox2.Location = new System.Drawing.Point(683, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
@@ -107,26 +106,13 @@ namespace Server_manage
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox1.Location = new System.Drawing.Point(723, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(40, 36);
             this.guna2ControlBox1.TabIndex = 0;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(312, 2);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 30);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Server";
             // 
             // guna2DragControl1
             // 
@@ -135,9 +121,8 @@ namespace Server_manage
             // TextIP
             // 
             this.TextIP.BackColor = System.Drawing.Color.Transparent;
-            this.TextIP.BorderColor = System.Drawing.Color.Lime;
+            this.TextIP.BorderColor = System.Drawing.Color.Black;
             this.TextIP.BorderRadius = 8;
-            this.TextIP.BorderThickness = 0;
             this.TextIP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextIP.DefaultText = "192.168.1.13:9000";
             this.TextIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -158,6 +143,7 @@ namespace Server_manage
             this.TextIP.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TextIP.PlaceholderText = "IP/Port.......";
             this.TextIP.SelectedText = "";
+            this.TextIP.SelectionStart = 17;
             this.TextIP.ShadowDecoration.Parent = this.TextIP;
             this.TextIP.Size = new System.Drawing.Size(459, 47);
             this.TextIP.TabIndex = 21;
@@ -228,7 +214,7 @@ namespace Server_manage
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(22, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -241,7 +227,7 @@ namespace Server_manage
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(36, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -254,7 +240,7 @@ namespace Server_manage
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(525, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -265,6 +251,7 @@ namespace Server_manage
             // openServer
             // 
             this.openServer.BorderRadius = 11;
+            this.openServer.BorderThickness = 1;
             this.openServer.CheckedState.Parent = this.openServer;
             this.openServer.CustomImages.Parent = this.openServer;
             this.openServer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -273,8 +260,8 @@ namespace Server_manage
             this.openServer.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.openServer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.openServer.DisabledState.Parent = this.openServer;
-            this.openServer.FillColor = System.Drawing.Color.Turquoise;
-            this.openServer.FillColor2 = System.Drawing.Color.Gray;
+            this.openServer.FillColor = System.Drawing.Color.YellowGreen;
+            this.openServer.FillColor2 = System.Drawing.Color.Lime;
             this.openServer.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.openServer.ForeColor = System.Drawing.Color.White;
             this.openServer.HoverState.Parent = this.openServer;
@@ -289,6 +276,7 @@ namespace Server_manage
             // btnClose
             // 
             this.btnClose.BorderRadius = 11;
+            this.btnClose.BorderThickness = 1;
             this.btnClose.CheckedState.Parent = this.btnClose;
             this.btnClose.CustomImages.Parent = this.btnClose;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -297,8 +285,8 @@ namespace Server_manage
             this.btnClose.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.DisabledState.Parent = this.btnClose;
-            this.btnClose.FillColor = System.Drawing.Color.CadetBlue;
-            this.btnClose.FillColor2 = System.Drawing.Color.Black;
+            this.btnClose.FillColor = System.Drawing.Color.YellowGreen;
+            this.btnClose.FillColor2 = System.Drawing.Color.Lime;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.Parent = this.btnClose;
@@ -312,7 +300,9 @@ namespace Server_manage
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.TextIP);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -345,14 +335,22 @@ namespace Server_manage
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(582, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(27, 20);
+            this.textBox1.TabIndex = 33;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(49)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(763, 570);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
@@ -387,7 +385,6 @@ namespace Server_manage
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2TextBox TextIP;
         private Guna.UI2.WinForms.Guna2TextBox textIFO;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox listClientText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -398,6 +395,7 @@ namespace Server_manage
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

@@ -20,7 +20,7 @@ namespace Server_manage
     {
         SimpleTcpServer server;
         List<string> listClient = new List<string>();
-        int count_time = 0;
+        
         //Xử lý Socket serve
         IPEndPoint IP;
         Socket Server1;
@@ -36,7 +36,6 @@ namespace Server_manage
         #region connect
         private void coneect()
         {
-            ClientList = new List<Socket>();
             string textP = ""; string textPort = "";
             int Index = TextIP.Text.IndexOf(':');
 
@@ -88,14 +87,14 @@ namespace Server_manage
         private void ThreadUpdataData()
         {
             sql_manage.updateData();
-            Thread.Sleep(30);
-            sql_manage.updateData();
+            timer1.Start();
         }
 
         //Tạo data tự động lấy từ json mỗi khi mở app
         private void Form1_Load(object sender, EventArgs e)
         {
             //sql_manage.updateData(); // Gọi hàm update dữ liệu
+            ClientList = new List<Socket>();
             listClient = new List<string>();
             Thread trd = new Thread(new ThreadStart(ThreadUpdataData));
             trd.Start();
@@ -230,21 +229,14 @@ namespace Server_manage
         #endregion
 
         #region timer tick
-
+        int count_time = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
             count_time++;
-            if (count_time % 10 == 0) {
-                listClientText.Text = string.Empty;
-                int i = 0;
-                foreach(Socket item in ClientList) {
-                    if (!SocketConnected(item)) { 
-                        textIFO.Text+= $"{item.RemoteEndPoint.ToString()}:Disconnected{Environment.NewLine}";
-                    }
-                    else {
-                        listClientText.Text += $"{item.RemoteEndPoint.ToString()}";  
-                    } 
-                }
+            textBox1.Text = count_time.ToString();
+            if(count_time %1200 == 0)
+            {
+                sql_manage.updateData();
             }
         }
         #endregion

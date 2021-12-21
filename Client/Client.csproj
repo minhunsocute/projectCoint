@@ -126,5 +126,35 @@
   <ItemGroup>
     <None Include="Resources\arrow-circle.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-cartoon-icon-set_152558-1001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-cartoon-money-bag-money-bag-united-states-dollar-recreation.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

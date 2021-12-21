@@ -32,14 +32,17 @@ namespace Client
         #region Connect 
         void Connect()
         {
-            IP = new IPEndPoint(IPAddress.Parse(TextIP.Text), Int32.Parse(TextPort.Text));
-            Client1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
+                IP = new IPEndPoint(IPAddress.Parse(TextIP.Text), Int32.Parse(TextPort.Text));
+                Client1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 Client1.Connect(IP);
-                CreateClient.Enabled = false;
-                btnSignIn.Enabled = true;
-                btnCreate.Enabled = true;
+                this.Invoke(new Action(() =>
+                {
+                    CreateClient.Enabled = false;
+                    btnSignIn.Enabled = true;
+                    btnCreate.Enabled = true;
+                }));
                 Thread listen = new Thread(Receive);
                 listen.IsBackground = true;
                 listen.Start();
@@ -159,7 +162,10 @@ namespace Client
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            Client1.Send(Serialize("5Disconnected"));
+            if (CreateClient.Enabled == false)
+            {
+                Client1.Send(Serialize("5Disconnected"));
+            }
         }
         #endregion
 
@@ -185,6 +191,9 @@ namespace Client
                 btnSignIn.Enabled = false;
                 btnCreate.Enabled = false;
                 CreateClient.Enabled = true;
+                ((Control)show).Enabled = false;
+                ((Control)login).Enabled = true;
+                ((Control)create).Enabled = true;
             }
         }
         #endregion
@@ -252,7 +261,8 @@ namespace Client
         {
             if (s[0] == '1')
             {
-                OpenTable(); name.Text += Username.Text;
+                OpenTable(); 
+                name.Text += Username.Text;
                 Client1.Send(Serialize("3AllData"));
             }
             else if (s[0] == '2')

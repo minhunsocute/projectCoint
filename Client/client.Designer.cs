@@ -30,54 +30,31 @@ namespace Client
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.login = new System.Windows.Forms.TabPage();
             this.LoginPage = new System.Windows.Forms.Panel();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.Password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.create = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CreatePage = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.creatRePass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.guna2ToggleSwitch2 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.createPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.createUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.show = new System.Windows.Forms.TabPage();
             this.updateText = new System.Windows.Forms.Label();
-            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
             this.coinsData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,13 +63,11 @@ namespace Client
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchString = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.dateCheck = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -102,23 +77,54 @@ namespace Client
             this.MessageFromServer = new Guna.UI2.WinForms.Guna2TextBox();
             this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnConnect = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.createPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.MainControl.SuspendLayout();
             this.login.SuspendLayout();
             this.LoginPage.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
             this.create.SuspendLayout();
             this.panel1.SuspendLayout();
             this.CreatePage.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
-            this.guna2CustomGradientPanel6.SuspendLayout();
-            this.guna2CustomGradientPanel4.SuspendLayout();
             this.show.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coinsData)).BeginInit();
             this.guna2CustomGradientPanel7.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.guna2CustomGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // MainControl
@@ -134,27 +140,27 @@ namespace Client
             this.MainControl.SelectedIndex = 0;
             this.MainControl.Size = new System.Drawing.Size(876, 613);
             this.MainControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.MainControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.MainControl.TabButtonHoverState.FillColor = System.Drawing.Color.MediumAquamarine;
             this.MainControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.MainControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.MainControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.MainControl.TabButtonHoverState.ForeColor = System.Drawing.Color.Black;
+            this.MainControl.TabButtonHoverState.InnerColor = System.Drawing.Color.CadetBlue;
             this.MainControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.MainControl.TabButtonIdleState.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.MainControl.TabButtonIdleState.FillColor = System.Drawing.Color.Transparent;
             this.MainControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.MainControl.TabButtonIdleState.ForeColor = System.Drawing.Color.White;
-            this.MainControl.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.MainControl.TabButtonIdleState.ForeColor = System.Drawing.Color.Black;
+            this.MainControl.TabButtonIdleState.InnerColor = System.Drawing.Color.CadetBlue;
             this.MainControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.MainControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.MainControl.TabButtonSelectedState.FillColor = System.Drawing.Color.MediumAquamarine;
             this.MainControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.MainControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.MainControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.MainControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.CadetBlue;
             this.MainControl.TabButtonSize = new System.Drawing.Size(160, 40);
             this.MainControl.TabIndex = 0;
-            this.MainControl.TabMenuBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.MainControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             // 
             // login
             // 
-            this.login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.login.BackColor = System.Drawing.Color.White;
             this.login.Controls.Add(this.LoginPage);
             this.login.Location = new System.Drawing.Point(164, 4);
             this.login.Margin = new System.Windows.Forms.Padding(2);
@@ -166,8 +172,8 @@ namespace Client
             // 
             // LoginPage
             // 
-            this.LoginPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.LoginPage.Controls.Add(this.guna2CustomGradientPanel3);
+            this.LoginPage.BackColor = System.Drawing.SystemColors.Control;
+            this.LoginPage.Controls.Add(this.guna2CustomGradientPanel2);
             this.LoginPage.Controls.Add(this.panel6);
             this.LoginPage.Controls.Add(this.panel2);
             this.LoginPage.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,70 +183,6 @@ namespace Client
             this.LoginPage.Name = "LoginPage";
             this.LoginPage.Size = new System.Drawing.Size(704, 601);
             this.LoginPage.TabIndex = 3;
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2CustomGradientPanel3.BorderRadius = 13;
-            this.guna2CustomGradientPanel3.BorderThickness = 1;
-            this.guna2CustomGradientPanel3.Controls.Add(this.label7);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label9);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label8);
-            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(36, 330);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(278, 227);
-            this.guna2CustomGradientPanel3.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.label7.Location = new System.Drawing.Point(14, 40);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(260, 32);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "ĐỒ ÁN TỶ GIÁ TIỀN TỆ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.label9.Location = new System.Drawing.Point(36, 134);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 28);
-            this.label9.TabIndex = 10;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.label8.Location = new System.Drawing.Point(36, 93);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 28);
-            this.label8.TabIndex = 9;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::Client.Properties.Resources.pngwing_com;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(56, 85);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(238, 200);
-            this.panel6.TabIndex = 7;
             // 
             // panel2
             // 
@@ -253,73 +195,54 @@ namespace Client
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.BorderRadius = 13;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CustomGradientPanel2);
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.BorderRadius = 20;
+            this.guna2CustomGradientPanel1.BorderThickness = 1;
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.panel8);
+            this.guna2CustomGradientPanel1.Controls.Add(this.panel4);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2ToggleSwitch1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnSignIn);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.Password);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.Username);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(25, 85);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(28, 85);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 429);
             this.guna2CustomGradientPanel1.TabIndex = 7;
             // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.BorderRadius = 10;
-            this.guna2CustomGradientPanel2.BorderThickness = 2;
-            this.guna2CustomGradientPanel2.Controls.Add(this.panel4);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(94, 14);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(124, 113);
-            this.guna2CustomGradientPanel2.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Client.Properties.Resources.account;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(25, 18);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(77, 76);
-            this.panel4.TabIndex = 0;
-            // 
             // guna2ToggleSwitch1
             // 
             this.guna2ToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
             this.guna2ToggleSwitch1.Location = new System.Drawing.Point(52, 326);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
             this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
             this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
             this.guna2ToggleSwitch1.TabIndex = 8;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch1.UncheckedState.BorderThickness = 1;
             this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
             // 
             // btnSignIn
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.Transparent;
             this.btnSignIn.BorderRadius = 11;
+            this.btnSignIn.BorderThickness = 1;
             this.btnSignIn.CheckedState.Parent = this.btnSignIn;
             this.btnSignIn.CustomImages.Parent = this.btnSignIn;
             this.btnSignIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -329,9 +252,10 @@ namespace Client
             this.btnSignIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSignIn.DisabledState.Parent = this.btnSignIn;
             this.btnSignIn.Enabled = false;
-            this.btnSignIn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(200)))));
+            this.btnSignIn.FillColor = System.Drawing.Color.YellowGreen;
+            this.btnSignIn.FillColor2 = System.Drawing.Color.Lime;
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnSignIn.ForeColor = System.Drawing.Color.White;
+            this.btnSignIn.ForeColor = System.Drawing.Color.Black;
             this.btnSignIn.HoverState.Parent = this.btnSignIn;
             this.btnSignIn.Location = new System.Drawing.Point(143, 356);
             this.btnSignIn.Name = "btnSignIn";
@@ -341,23 +265,12 @@ namespace Client
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click_1);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label2.Location = new System.Drawing.Point(47, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Username";
-            // 
             // Password
             // 
             this.Password.BackColor = System.Drawing.Color.Transparent;
             this.Password.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
             this.Password.BorderRadius = 8;
+            this.Password.BorderThickness = 0;
             this.Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Password.DefaultText = "";
             this.Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -365,42 +278,31 @@ namespace Client
             this.Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Password.DisabledState.Parent = this.Password;
             this.Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Password.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.Password.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Password.FocusedState.Parent = this.Password;
             this.Password.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.Password.ForeColor = System.Drawing.Color.Black;
             this.Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Password.HoverState.Parent = this.Password;
-            this.Password.Location = new System.Drawing.Point(51, 261);
+            this.Password.Location = new System.Drawing.Point(89, 245);
             this.Password.Margin = new System.Windows.Forms.Padding(2);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '\0';
-            this.Password.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.Password.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Password.PlaceholderText = "Password";
             this.Password.SelectedText = "";
             this.Password.ShadowDecoration.Parent = this.Password;
-            this.Password.Size = new System.Drawing.Size(204, 47);
+            this.Password.Size = new System.Drawing.Size(166, 35);
             this.Password.TabIndex = 1;
             this.Password.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label3.Location = new System.Drawing.Point(47, 224);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 28);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Password";
             // 
             // Username
             // 
             this.Username.BackColor = System.Drawing.Color.Transparent;
             this.Username.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
             this.Username.BorderRadius = 8;
+            this.Username.BorderThickness = 0;
             this.Username.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Username.DefaultText = "";
             this.Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -408,27 +310,27 @@ namespace Client
             this.Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Username.DisabledState.Parent = this.Username;
             this.Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Username.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.Username.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Username.FocusedState.Parent = this.Username;
             this.Username.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.Username.ForeColor = System.Drawing.Color.Black;
             this.Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Username.HoverState.Parent = this.Username;
-            this.Username.Location = new System.Drawing.Point(51, 175);
+            this.Username.Location = new System.Drawing.Point(88, 178);
             this.Username.Margin = new System.Windows.Forms.Padding(2);
             this.Username.Name = "Username";
             this.Username.PasswordChar = '\0';
-            this.Username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.Username.PlaceholderForeColor = System.Drawing.Color.Black;
             this.Username.PlaceholderText = "Username";
             this.Username.SelectedText = "";
             this.Username.ShadowDecoration.Parent = this.Username;
-            this.Username.Size = new System.Drawing.Size(204, 47);
+            this.Username.Size = new System.Drawing.Size(164, 40);
             this.Username.TabIndex = 0;
             // 
             // create
             // 
-            this.create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.create.BackColor = System.Drawing.Color.White;
             this.create.Controls.Add(this.panel1);
             this.create.Location = new System.Drawing.Point(164, 4);
             this.create.Margin = new System.Windows.Forms.Padding(2);
@@ -440,9 +342,9 @@ namespace Client
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CreatePage);
-            this.panel1.Controls.Add(this.guna2CustomGradientPanel4);
+            this.panel1.Controls.Add(this.guna2CustomGradientPanel3);
             this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.CreatePage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -461,24 +363,29 @@ namespace Client
             // 
             // guna2CustomGradientPanel5
             // 
-            this.guna2CustomGradientPanel5.BorderRadius = 13;
+            this.guna2CustomGradientPanel5.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel5.BorderRadius = 20;
+            this.guna2CustomGradientPanel5.BorderThickness = 1;
+            this.guna2CustomGradientPanel5.Controls.Add(this.pictureBox7);
+            this.guna2CustomGradientPanel5.Controls.Add(this.pictureBox6);
+            this.guna2CustomGradientPanel5.Controls.Add(this.pictureBox5);
+            this.guna2CustomGradientPanel5.Controls.Add(this.pictureBox4);
+            this.guna2CustomGradientPanel5.Controls.Add(this.panel12);
+            this.guna2CustomGradientPanel5.Controls.Add(this.panel11);
+            this.guna2CustomGradientPanel5.Controls.Add(this.panel9);
             this.guna2CustomGradientPanel5.Controls.Add(this.creatRePass);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label15);
-            this.guna2CustomGradientPanel5.Controls.Add(this.guna2CustomGradientPanel6);
             this.guna2CustomGradientPanel5.Controls.Add(this.guna2ToggleSwitch2);
             this.guna2CustomGradientPanel5.Controls.Add(this.btnCreate);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label13);
             this.guna2CustomGradientPanel5.Controls.Add(this.createPass);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label14);
             this.guna2CustomGradientPanel5.Controls.Add(this.createUser);
-            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
-            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(25, 40);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.ShadowDecoration.Parent = this.guna2CustomGradientPanel5;
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(307, 521);
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(307, 522);
             this.guna2CustomGradientPanel5.TabIndex = 7;
             // 
             // creatRePass
@@ -486,6 +393,7 @@ namespace Client
             this.creatRePass.BackColor = System.Drawing.Color.Transparent;
             this.creatRePass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
             this.creatRePass.BorderRadius = 8;
+            this.creatRePass.BorderThickness = 0;
             this.creatRePass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.creatRePass.DefaultText = "";
             this.creatRePass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -493,86 +401,50 @@ namespace Client
             this.creatRePass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.creatRePass.DisabledState.Parent = this.creatRePass;
             this.creatRePass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.creatRePass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.creatRePass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.creatRePass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.creatRePass.FocusedState.Parent = this.creatRePass;
             this.creatRePass.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.creatRePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.creatRePass.ForeColor = System.Drawing.Color.Black;
             this.creatRePass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.creatRePass.HoverState.Parent = this.creatRePass;
-            this.creatRePass.Location = new System.Drawing.Point(51, 347);
+            this.creatRePass.Location = new System.Drawing.Point(85, 338);
             this.creatRePass.Margin = new System.Windows.Forms.Padding(2);
             this.creatRePass.Name = "creatRePass";
             this.creatRePass.PasswordChar = '\0';
-            this.creatRePass.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.creatRePass.PlaceholderText = "Password";
+            this.creatRePass.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.creatRePass.PlaceholderText = "Re Password";
             this.creatRePass.SelectedText = "";
             this.creatRePass.ShadowDecoration.Parent = this.creatRePass;
-            this.creatRePass.Size = new System.Drawing.Size(204, 47);
+            this.creatRePass.Size = new System.Drawing.Size(170, 35);
             this.creatRePass.TabIndex = 9;
             this.creatRePass.UseSystemPasswordChar = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label15.Location = new System.Drawing.Point(47, 310);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 28);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Re_Password";
-            // 
-            // guna2CustomGradientPanel6
-            // 
-            this.guna2CustomGradientPanel6.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel6.BorderRadius = 10;
-            this.guna2CustomGradientPanel6.BorderThickness = 2;
-            this.guna2CustomGradientPanel6.Controls.Add(this.panel9);
-            this.guna2CustomGradientPanel6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel6.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel6.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel6.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(94, 14);
-            this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
-            this.guna2CustomGradientPanel6.ShadowDecoration.Parent = this.guna2CustomGradientPanel6;
-            this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(124, 113);
-            this.guna2CustomGradientPanel6.TabIndex = 7;
-            // 
-            // panel9
-            // 
-            this.panel9.BackgroundImage = global::Client.Properties.Resources.add_user;
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Location = new System.Drawing.Point(25, 18);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(77, 76);
-            this.panel9.TabIndex = 0;
             // 
             // guna2ToggleSwitch2
             // 
             this.guna2ToggleSwitch2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch2.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch2.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2ToggleSwitch2.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch2.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2ToggleSwitch2.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch2.CheckedState.Parent = this.guna2ToggleSwitch2;
             this.guna2ToggleSwitch2.Location = new System.Drawing.Point(51, 408);
             this.guna2ToggleSwitch2.Name = "guna2ToggleSwitch2";
             this.guna2ToggleSwitch2.ShadowDecoration.Parent = this.guna2ToggleSwitch2;
             this.guna2ToggleSwitch2.Size = new System.Drawing.Size(35, 20);
             this.guna2ToggleSwitch2.TabIndex = 8;
-            this.guna2ToggleSwitch2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch2.UncheckedState.BorderThickness = 1;
             this.guna2ToggleSwitch2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch2.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2ToggleSwitch2.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.guna2ToggleSwitch2.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2ToggleSwitch2.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ToggleSwitch2.UncheckedState.Parent = this.guna2ToggleSwitch2;
             // 
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.Transparent;
             this.btnCreate.BorderRadius = 11;
+            this.btnCreate.BorderThickness = 1;
             this.btnCreate.CheckedState.Parent = this.btnCreate;
             this.btnCreate.CustomImages.Parent = this.btnCreate;
             this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -581,9 +453,10 @@ namespace Client
             this.btnCreate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCreate.DisabledState.Parent = this.btnCreate;
-            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(200)))));
+            this.btnCreate.FillColor = System.Drawing.Color.YellowGreen;
+            this.btnCreate.FillColor2 = System.Drawing.Color.Lime;
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.ForeColor = System.Drawing.Color.Black;
             this.btnCreate.HoverState.Parent = this.btnCreate;
             this.btnCreate.Location = new System.Drawing.Point(143, 437);
             this.btnCreate.Name = "btnCreate";
@@ -593,66 +466,11 @@ namespace Client
             this.btnCreate.Text = "Sign In";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click_1);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label13.Location = new System.Drawing.Point(47, 137);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 28);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Username";
-            // 
-            // createPass
-            // 
-            this.createPass.BackColor = System.Drawing.Color.Transparent;
-            this.createPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.createPass.BorderRadius = 8;
-            this.createPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.createPass.DefaultText = "";
-            this.createPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.createPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.createPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.createPass.DisabledState.Parent = this.createPass;
-            this.createPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.createPass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.createPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.createPass.FocusedState.Parent = this.createPass;
-            this.createPass.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.createPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.createPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.createPass.HoverState.Parent = this.createPass;
-            this.createPass.Location = new System.Drawing.Point(51, 261);
-            this.createPass.Margin = new System.Windows.Forms.Padding(2);
-            this.createPass.Name = "createPass";
-            this.createPass.PasswordChar = '\0';
-            this.createPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.createPass.PlaceholderText = "Password";
-            this.createPass.SelectedText = "";
-            this.createPass.ShadowDecoration.Parent = this.createPass;
-            this.createPass.Size = new System.Drawing.Size(204, 47);
-            this.createPass.TabIndex = 1;
-            this.createPass.UseSystemPasswordChar = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label14.Location = new System.Drawing.Point(47, 224);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 28);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Password";
-            // 
             // createUser
             // 
             this.createUser.BackColor = System.Drawing.Color.Transparent;
             this.createUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.createUser.BorderRadius = 8;
+            this.createUser.BorderThickness = 0;
             this.createUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.createUser.DefaultText = "";
             this.createUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -660,102 +478,38 @@ namespace Client
             this.createUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.createUser.DisabledState.Parent = this.createUser;
             this.createUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.createUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.createUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.createUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.createUser.FocusedState.Parent = this.createUser;
             this.createUser.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.createUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.createUser.ForeColor = System.Drawing.Color.Black;
             this.createUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.createUser.HoverState.Parent = this.createUser;
-            this.createUser.Location = new System.Drawing.Point(51, 175);
+            this.createUser.Location = new System.Drawing.Point(85, 213);
             this.createUser.Margin = new System.Windows.Forms.Padding(2);
             this.createUser.Name = "createUser";
             this.createUser.PasswordChar = '\0';
-            this.createUser.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.createUser.PlaceholderForeColor = System.Drawing.Color.Black;
             this.createUser.PlaceholderText = "Username";
             this.createUser.SelectedText = "";
             this.createUser.ShadowDecoration.Parent = this.createUser;
-            this.createUser.Size = new System.Drawing.Size(204, 47);
+            this.createUser.Size = new System.Drawing.Size(170, 35);
             this.createUser.TabIndex = 0;
-            // 
-            // guna2CustomGradientPanel4
-            // 
-            this.guna2CustomGradientPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.guna2CustomGradientPanel4.BorderRadius = 13;
-            this.guna2CustomGradientPanel4.BorderThickness = 1;
-            this.guna2CustomGradientPanel4.Controls.Add(this.label10);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label11);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label12);
-            this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(41, 328);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.ShadowDecoration.Parent = this.guna2CustomGradientPanel4;
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(278, 227);
-            this.guna2CustomGradientPanel4.TabIndex = 13;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.label10.Location = new System.Drawing.Point(14, 40);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(260, 32);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "ĐỒ ÁN TỶ GIÁ TIỀN TỆ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.label11.Location = new System.Drawing.Point(36, 134);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 28);
-            this.label11.TabIndex = 10;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.label12.Location = new System.Drawing.Point(36, 93);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 28);
-            this.label12.TabIndex = 9;
-            // 
-            // panel7
-            // 
-            this.panel7.BackgroundImage = global::Client.Properties.Resources.pngwing_com;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(59, 85);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(238, 200);
-            this.panel7.TabIndex = 12;
             // 
             // show
             // 
-            this.show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.show.BackColor = System.Drawing.Color.White;
             this.show.Controls.Add(this.updateText);
-            this.show.Controls.Add(this.btnReset);
-            this.show.Controls.Add(this.btnSearch);
             this.show.Controls.Add(this.label17);
             this.show.Controls.Add(this.label16);
             this.show.Controls.Add(this.name);
-            this.show.Controls.Add(this.btnLogout);
             this.show.Controls.Add(this.coinsData);
             this.show.Controls.Add(this.SearchString);
             this.show.Controls.Add(this.guna2CustomGradientPanel7);
             this.show.Controls.Add(this.dateCheck);
+            this.show.Controls.Add(this.btnReset);
+            this.show.Controls.Add(this.btnSearch);
+            this.show.Controls.Add(this.btnLogout);
             this.show.Location = new System.Drawing.Point(164, 4);
             this.show.Name = "show";
             this.show.Padding = new System.Windows.Forms.Padding(3);
@@ -768,7 +522,7 @@ namespace Client
             this.updateText.AutoSize = true;
             this.updateText.BackColor = System.Drawing.Color.Transparent;
             this.updateText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.updateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
+            this.updateText.ForeColor = System.Drawing.Color.Black;
             this.updateText.Location = new System.Drawing.Point(416, 135);
             this.updateText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.updateText.Name = "updateText";
@@ -776,58 +530,12 @@ namespace Client
             this.updateText.TabIndex = 55;
             this.updateText.Text = "Update:";
             // 
-            // btnReset
-            // 
-            this.btnReset.BorderRadius = 8;
-            this.btnReset.CheckedState.Parent = this.btnReset;
-            this.btnReset.CustomImages.Parent = this.btnReset;
-            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReset.DisabledState.Parent = this.btnReset;
-            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Image = global::Client.Properties.Resources.arrow_circle;
-            this.btnReset.Location = new System.Drawing.Point(567, 166);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.ShadowDecoration.Parent = this.btnReset;
-            this.btnReset.Size = new System.Drawing.Size(110, 36);
-            this.btnReset.TabIndex = 54;
-            this.btnReset.Text = "reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 8;
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.DisabledState.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Image = global::Client.Properties.Resources.magnifier;
-            this.btnSearch.Location = new System.Drawing.Point(421, 166);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(110, 36);
-            this.btnSearch.TabIndex = 53;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
+            this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(240, 135);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
@@ -840,7 +548,7 @@ namespace Client
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(97)))), ((int)(((byte)(82)))));
+            this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(5, 135);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
@@ -853,7 +561,7 @@ namespace Client
             this.name.AutoSize = true;
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.name.ForeColor = System.Drawing.Color.Black;
             this.name.Location = new System.Drawing.Point(153, 73);
             this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name.Name = "name";
@@ -861,41 +569,23 @@ namespace Client
             this.name.TabIndex = 50;
             this.name.Text = "Hello:";
             // 
-            // btnLogout
-            // 
-            this.btnLogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.CheckedState.Parent = this.btnLogout;
-            this.btnLogout.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.HoverState.Parent = this.btnLogout;
-            this.btnLogout.Image = global::Client.Properties.Resources.back;
-            this.btnLogout.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnLogout.ImageRotate = 0F;
-            this.btnLogout.Location = new System.Drawing.Point(659, 6);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.PressedState.Parent = this.btnLogout;
-            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
-            this.btnLogout.Size = new System.Drawing.Size(43, 41);
-            this.btnLogout.TabIndex = 49;
-            this.btnLogout.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
             // coinsData
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.coinsData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.coinsData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.coinsData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.coinsData.BackgroundColor = System.Drawing.Color.White;
             this.coinsData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.coinsData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.coinsData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.coinsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.coinsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.coinsData.ColumnHeadersHeight = 21;
             this.coinsData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -903,17 +593,17 @@ namespace Client
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.coinsData.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.coinsData.DefaultCellStyle = dataGridViewCellStyle6;
             this.coinsData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.coinsData.EnableHeadersVisualStyles = false;
-            this.coinsData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.coinsData.GridColor = System.Drawing.Color.Black;
             this.coinsData.Location = new System.Drawing.Point(3, 244);
             this.coinsData.Name = "coinsData";
             this.coinsData.RowHeadersVisible = false;
@@ -926,7 +616,7 @@ namespace Client
             this.coinsData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.coinsData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.coinsData.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.coinsData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.coinsData.ThemeStyle.GridColor = System.Drawing.Color.Black;
             this.coinsData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.coinsData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.coinsData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -970,16 +660,15 @@ namespace Client
             // SearchString
             // 
             this.SearchString.BackColor = System.Drawing.Color.Transparent;
-            this.SearchString.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.SearchString.BorderColor = System.Drawing.Color.Black;
             this.SearchString.BorderRadius = 8;
             this.SearchString.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.SearchString.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SearchString.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.SearchString.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.SearchString.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.SearchString.FocusedState.Parent = this.SearchString;
             this.SearchString.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.SearchString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.SearchString.ForeColor = System.Drawing.Color.Black;
             this.SearchString.HoverState.Parent = this.SearchString;
             this.SearchString.ItemHeight = 30;
             this.SearchString.ItemsAppearance.Parent = this.SearchString;
@@ -1005,22 +694,13 @@ namespace Client
             this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(120, 99);
             this.guna2CustomGradientPanel7.TabIndex = 46;
             // 
-            // panel10
-            // 
-            this.panel10.BackgroundImage = global::Client.Properties.Resources.account;
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Location = new System.Drawing.Point(25, 18);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(65, 63);
-            this.panel10.TabIndex = 0;
-            // 
             // dateCheck
             // 
             this.dateCheck.BorderThickness = 2;
             this.dateCheck.Checked = true;
             this.dateCheck.CheckedState.Parent = this.dateCheck;
             this.dateCheck.CustomFormat = "yyyy-MM-dd";
-            this.dateCheck.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.dateCheck.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.dateCheck.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateCheck.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateCheck.HoverState.Parent = this.dateCheck;
@@ -1057,7 +737,7 @@ namespace Client
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.guna2ControlBox2);
@@ -1073,7 +753,7 @@ namespace Client
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(62, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -1081,22 +761,13 @@ namespace Client
             this.label5.TabIndex = 7;
             this.label5.Text = "TCP/Client";
             // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::Client.Properties.Resources.Untitled;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(27, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(30, 29);
-            this.panel5.TabIndex = 7;
-            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1056, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
@@ -1106,9 +777,9 @@ namespace Client
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(60)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1096, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
@@ -1123,7 +794,7 @@ namespace Client
             // TextIP
             // 
             this.TextIP.BackColor = System.Drawing.Color.Transparent;
-            this.TextIP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextIP.BorderColor = System.Drawing.Color.Black;
             this.TextIP.BorderRadius = 8;
             this.TextIP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextIP.DefaultText = "192.168.1.13";
@@ -1132,18 +803,17 @@ namespace Client
             this.TextIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextIP.DisabledState.Parent = this.TextIP;
             this.TextIP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextIP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.TextIP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextIP.FocusedState.Parent = this.TextIP;
             this.TextIP.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.TextIP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextIP.ForeColor = System.Drawing.Color.Black;
             this.TextIP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextIP.HoverState.Parent = this.TextIP;
             this.TextIP.Location = new System.Drawing.Point(903, 113);
             this.TextIP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TextIP.Name = "TextIP";
             this.TextIP.PasswordChar = '\0';
-            this.TextIP.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextIP.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TextIP.PlaceholderText = "IP......";
             this.TextIP.SelectedText = "";
             this.TextIP.SelectionStart = 12;
@@ -1154,7 +824,7 @@ namespace Client
             // TextPort
             // 
             this.TextPort.BackColor = System.Drawing.Color.Transparent;
-            this.TextPort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextPort.BorderColor = System.Drawing.Color.Black;
             this.TextPort.BorderRadius = 8;
             this.TextPort.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextPort.DefaultText = "9000";
@@ -1163,18 +833,17 @@ namespace Client
             this.TextPort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextPort.DisabledState.Parent = this.TextPort;
             this.TextPort.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextPort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.TextPort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextPort.FocusedState.Parent = this.TextPort;
             this.TextPort.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.TextPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextPort.ForeColor = System.Drawing.Color.Black;
             this.TextPort.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextPort.HoverState.Parent = this.TextPort;
             this.TextPort.Location = new System.Drawing.Point(906, 206);
             this.TextPort.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TextPort.Name = "TextPort";
             this.TextPort.PasswordChar = '\0';
-            this.TextPort.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.TextPort.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TextPort.PlaceholderText = "Port......";
             this.TextPort.SelectedText = "";
             this.TextPort.SelectionStart = 4;
@@ -1195,7 +864,7 @@ namespace Client
             // 
             // MessageFromServer
             // 
-            this.MessageFromServer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.MessageFromServer.BorderColor = System.Drawing.Color.Black;
             this.MessageFromServer.BorderRadius = 11;
             this.MessageFromServer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.MessageFromServer.DefaultText = "";
@@ -1204,11 +873,10 @@ namespace Client
             this.MessageFromServer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.MessageFromServer.DisabledState.Parent = this.MessageFromServer;
             this.MessageFromServer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.MessageFromServer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.MessageFromServer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.MessageFromServer.FocusedState.Parent = this.MessageFromServer;
             this.MessageFromServer.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.MessageFromServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.MessageFromServer.ForeColor = System.Drawing.Color.Black;
             this.MessageFromServer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.MessageFromServer.HoverState.Parent = this.MessageFromServer;
             this.MessageFromServer.Location = new System.Drawing.Point(903, 412);
@@ -1216,7 +884,7 @@ namespace Client
             this.MessageFromServer.Multiline = true;
             this.MessageFromServer.Name = "MessageFromServer";
             this.MessageFromServer.PasswordChar = '\0';
-            this.MessageFromServer.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.MessageFromServer.PlaceholderForeColor = System.Drawing.Color.Black;
             this.MessageFromServer.PlaceholderText = "Server.....";
             this.MessageFromServer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.MessageFromServer.SelectedText = "";
@@ -1227,6 +895,7 @@ namespace Client
             // CreateClient
             // 
             this.CreateClient.BorderRadius = 11;
+            this.CreateClient.BorderThickness = 1;
             this.CreateClient.CheckedState.Parent = this.CreateClient;
             this.CreateClient.CustomImages.Parent = this.CreateClient;
             this.CreateClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -1235,9 +904,10 @@ namespace Client
             this.CreateClient.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CreateClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.CreateClient.DisabledState.Parent = this.CreateClient;
-            this.CreateClient.FillColor = System.Drawing.Color.Turquoise;
+            this.CreateClient.FillColor = System.Drawing.Color.YellowGreen;
+            this.CreateClient.FillColor2 = System.Drawing.Color.Lime;
             this.CreateClient.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CreateClient.ForeColor = System.Drawing.Color.White;
+            this.CreateClient.ForeColor = System.Drawing.Color.Black;
             this.CreateClient.HoverState.Parent = this.CreateClient;
             this.CreateClient.Location = new System.Drawing.Point(906, 284);
             this.CreateClient.Name = "CreateClient";
@@ -1250,6 +920,7 @@ namespace Client
             // btnConnect
             // 
             this.btnConnect.BorderRadius = 11;
+            this.btnConnect.BorderThickness = 1;
             this.btnConnect.CheckedState.Parent = this.btnConnect;
             this.btnConnect.CustomImages.Parent = this.btnConnect;
             this.btnConnect.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -1259,9 +930,10 @@ namespace Client
             this.btnConnect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnConnect.DisabledState.Parent = this.btnConnect;
             this.btnConnect.Enabled = false;
-            this.btnConnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(95)))), ((int)(((byte)(200)))));
+            this.btnConnect.FillColor = System.Drawing.Color.YellowGreen;
+            this.btnConnect.FillColor2 = System.Drawing.Color.Lime;
             this.btnConnect.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConnect.ForeColor = System.Drawing.Color.White;
+            this.btnConnect.ForeColor = System.Drawing.Color.Black;
             this.btnConnect.HoverState.Parent = this.btnConnect;
             this.btnConnect.Location = new System.Drawing.Point(1029, 284);
             this.btnConnect.Name = "btnConnect";
@@ -1271,11 +943,305 @@ namespace Client
             this.btnConnect.Text = "Connect";
             this.btnConnect.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(53, 215);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(202, 2);
+            this.panel4.TabIndex = 9;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(52, 280);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(202, 2);
+            this.panel8.TabIndex = 10;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(52, 246);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(202, 2);
+            this.panel9.TabIndex = 11;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Black;
+            this.panel11.Location = new System.Drawing.Point(51, 306);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(202, 2);
+            this.panel11.TabIndex = 12;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Black;
+            this.panel12.Location = new System.Drawing.Point(51, 371);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(202, 2);
+            this.panel12.TabIndex = 12;
+            // 
+            // createPass
+            // 
+            this.createPass.BackColor = System.Drawing.Color.Transparent;
+            this.createPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.createPass.BorderThickness = 0;
+            this.createPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.createPass.DefaultText = "";
+            this.createPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.createPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.createPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.createPass.DisabledState.Parent = this.createPass;
+            this.createPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.createPass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.createPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.createPass.FocusedState.Parent = this.createPass;
+            this.createPass.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.createPass.ForeColor = System.Drawing.Color.Black;
+            this.createPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.createPass.HoverState.Parent = this.createPass;
+            this.createPass.Location = new System.Drawing.Point(85, 270);
+            this.createPass.Margin = new System.Windows.Forms.Padding(2);
+            this.createPass.Name = "createPass";
+            this.createPass.PasswordChar = '\0';
+            this.createPass.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.createPass.PlaceholderText = "Password";
+            this.createPass.SelectedText = "";
+            this.createPass.ShadowDecoration.Parent = this.createPass;
+            this.createPass.Size = new System.Drawing.Size(170, 35);
+            this.createPass.TabIndex = 1;
+            this.createPass.UseSystemPasswordChar = true;
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel2.BorderRadius = 13;
+            this.guna2CustomGradientPanel2.BorderThickness = 2;
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox8);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(25, 300);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(287, 214);
+            this.guna2CustomGradientPanel2.TabIndex = 8;
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm1;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(27, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 29);
+            this.panel5.TabIndex = 7;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Client.Properties.Resources.png_clipart_cartoon_money_bag_money_bag_united_states_dollar_recreation;
+            this.pictureBox8.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(206, 154);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::Client.Properties.Resources.money_cartoon_icon_set_152558_100;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(3, 93);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(339, 200);
+            this.panel6.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.pictureBox3.Image = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm3;
+            this.pictureBox3.Location = new System.Drawing.Point(79, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(139, 119);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Client.Properties.Resources.padlock;
+            this.pictureBox2.Location = new System.Drawing.Point(60, 252);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Client.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 185);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackgroundImage = global::Client.Properties.Resources.money_cartoon_icon_set_152558_100;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Location = new System.Drawing.Point(5, 88);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(339, 200);
+            this.panel7.TabIndex = 15;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.pictureBox7.Image = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm2;
+            this.pictureBox7.Location = new System.Drawing.Point(85, 43);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(139, 126);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::Client.Properties.Resources.padlock;
+            this.pictureBox6.Location = new System.Drawing.Point(56, 338);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::Client.Properties.Resources.padlock;
+            this.pictureBox5.Location = new System.Drawing.Point(56, 273);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Client.Properties.Resources.user;
+            this.pictureBox4.Location = new System.Drawing.Point(56, 213);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackgroundImage = global::Client.Properties.Resources.account;
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Location = new System.Drawing.Point(25, 18);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(65, 63);
+            this.panel10.TabIndex = 0;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BorderRadius = 8;
+            this.btnReset.BorderThickness = 1;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReset.DisabledState.Parent = this.btnReset;
+            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Image = global::Client.Properties.Resources.arrow_circle;
+            this.btnReset.Location = new System.Drawing.Point(567, 166);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(110, 36);
+            this.btnReset.TabIndex = 54;
+            this.btnReset.Text = "reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderRadius = 8;
+            this.btnSearch.BorderThickness = 1;
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.DisabledState.Parent = this.btnSearch;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Image = global::Client.Properties.Resources.magnifier;
+            this.btnSearch.Location = new System.Drawing.Point(421, 166);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(110, 36);
+            this.btnSearch.TabIndex = 53;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.CheckedState.Parent = this.btnLogout;
+            this.btnLogout.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.HoverState.Parent = this.btnLogout;
+            this.btnLogout.Image = global::Client.Properties.Resources.back;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnLogout.ImageRotate = 0F;
+            this.btnLogout.Location = new System.Drawing.Point(659, 6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.PressedState.Parent = this.btnLogout;
+            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
+            this.btnLogout.Size = new System.Drawing.Size(43, 41);
+            this.btnLogout.TabIndex = 49;
+            this.btnLogout.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // guna2CustomGradientPanel3
+            // 
+            this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel3.BorderRadius = 13;
+            this.guna2CustomGradientPanel3.BorderThickness = 2;
+            this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox9);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(29, 313);
+            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
+            this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(287, 214);
+            this.guna2CustomGradientPanel3.TabIndex = 16;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Client.Properties.Resources.png_clipart_cartoon_money_bag_money_bag_united_states_dollar_recreation;
+            this.pictureBox9.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(206, 154);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(1136, 649);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.CreateClient);
@@ -1295,26 +1261,29 @@ namespace Client
             this.MainControl.ResumeLayout(false);
             this.login.ResumeLayout(false);
             this.LoginPage.ResumeLayout(false);
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
-            this.guna2CustomGradientPanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.create.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.CreatePage.ResumeLayout(false);
             this.guna2CustomGradientPanel5.ResumeLayout(false);
-            this.guna2CustomGradientPanel5.PerformLayout();
-            this.guna2CustomGradientPanel6.ResumeLayout(false);
-            this.guna2CustomGradientPanel4.ResumeLayout(false);
-            this.guna2CustomGradientPanel4.PerformLayout();
             this.show.ResumeLayout(false);
             this.show.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coinsData)).EndInit();
             this.guna2CustomGradientPanel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.guna2CustomGradientPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1327,11 +1296,9 @@ namespace Client
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage login;
         private System.Windows.Forms.Panel LoginPage;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox Username;
         private Guna.UI2.WinForms.Guna2TextBox Password;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
@@ -1341,9 +1308,6 @@ namespace Client
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnSignIn;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox TextIP;
         private Guna.UI2.WinForms.Guna2TextBox TextPort;
@@ -1352,26 +1316,11 @@ namespace Client
         private Guna.UI2.WinForms.Guna2GradientTileButton CreateClient;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnConnect;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel CreatePage;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
         private Guna.UI2.WinForms.Guna2TextBox creatRePass;
-        private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
-        private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnCreate;
-        private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox createPass;
-        private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox createUser;
         private System.Windows.Forms.TabPage show;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateCheck;
@@ -1391,6 +1340,25 @@ namespace Client
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label updateText;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel9;
+        private Guna.UI2.WinForms.Guna2TextBox createPass;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel7;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 
