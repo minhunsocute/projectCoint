@@ -25,7 +25,6 @@ namespace Server_manage
         IPEndPoint IP;
         Socket Server1;
         List<Socket> ClientList;
-
         public Form1()
         {
             CheckForIllegalCrossThreadCalls = false;

@@ -19,7 +19,6 @@ namespace Client
     public partial class client : Form
     {
         int check = 0;
-        SimpleTcpClient Client;
         int check_LoadCombo = 0;
         IPEndPoint IP;
         Socket Client1;
@@ -59,7 +58,6 @@ namespace Client
         {
             btnCreate.Enabled = false;
             btnSignIn.Enabled = false;
-            btnConnect.Enabled = false;
             ((Control)show).Enabled = false;
         }
         private void Form1_Load_1(object sender, EventArgs e)
@@ -82,29 +80,9 @@ namespace Client
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(Username.Text) && (!string.IsNullOrEmpty(Password.Text)))
-            {
-                Client.Send($"Login:{Username.Text}%{Password.Text}");
-                MessageFromServer.Text += $"Me:LogIn:{Username.Text}%{Password.Text}{Environment.NewLine}";
-            }
-        }
+       
 
-        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Client.Connect();
-                btnCreate.Enabled = true;
-                btnSignIn.Enabled = true;
-                btnConnect.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
         //Sign In
         private void btnSignIn_Click_1(object sender, EventArgs e)
         {

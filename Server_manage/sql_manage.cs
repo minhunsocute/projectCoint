@@ -15,8 +15,8 @@ namespace Server_manage
 {
     public class sql_manage
     {
-        
-        private string conStr = @"Data Source=LAPTOP-DI57MUOG;Initial Catalog=COINS_MANAGE;Integrated Security=True";
+        public static string strComputerName = Environment.MachineName.ToString();
+        private string conStr = $"Data Source={strComputerName};Initial Catalog=COINS_MANAGE;Integrated Security=True";
         private SqlConnection conn;
         private SqlDataAdapter myAdapter;
         private SqlCommand comm;
@@ -201,6 +201,7 @@ namespace Server_manage
         //INSERT INTO ACCOUNT TABLE
         public void Insert_Account(string stringCheck)
         {
+           
             string userName = "";
             string password = "";
             string countS = "";

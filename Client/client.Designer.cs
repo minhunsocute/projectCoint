@@ -36,19 +36,38 @@ namespace Client
             this.MainControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.login = new System.Windows.Forms.TabPage();
             this.LoginPage = new System.Windows.Forms.Panel();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.create = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.CreatePage = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.creatRePass = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ToggleSwitch2 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.createPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.createUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.show = new System.Windows.Forms.TabPage();
             this.updateText = new System.Windows.Forms.Label();
@@ -63,11 +82,16 @@ namespace Client
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchString = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.dateCheck = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -76,55 +100,30 @@ namespace Client
             this.label6 = new System.Windows.Forms.Label();
             this.MessageFromServer = new Guna.UI2.WinForms.Guna2TextBox();
             this.CreateClient = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnConnect = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.createPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.MainControl.SuspendLayout();
             this.login.SuspendLayout();
             this.LoginPage.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.guna2CustomGradientPanel1.SuspendLayout();
-            this.create.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.CreatePage.SuspendLayout();
-            this.guna2CustomGradientPanel5.SuspendLayout();
-            this.show.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coinsData)).BeginInit();
-            this.guna2CustomGradientPanel7.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.create.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.guna2CustomGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.CreatePage.SuspendLayout();
+            this.guna2CustomGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.guna2CustomGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.show.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coinsData)).BeginInit();
+            this.guna2CustomGradientPanel7.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainControl
@@ -184,6 +183,37 @@ namespace Client
             this.LoginPage.Size = new System.Drawing.Size(704, 601);
             this.LoginPage.TabIndex = 3;
             // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel2.BorderRadius = 13;
+            this.guna2CustomGradientPanel2.BorderThickness = 2;
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox8);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(25, 300);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(287, 214);
+            this.guna2CustomGradientPanel2.TabIndex = 8;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Client.Properties.Resources.png_clipart_cartoon_money_bag_money_bag_united_states_dollar_recreation;
+            this.pictureBox8.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(206, 154);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::Client.Properties.Resources.money_cartoon_icon_set_152558_100;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(3, 93);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(339, 200);
+            this.panel6.TabIndex = 7;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
@@ -217,6 +247,55 @@ namespace Client
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 429);
             this.guna2CustomGradientPanel1.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.pictureBox3.Image = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm3;
+            this.pictureBox3.Location = new System.Drawing.Point(79, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(139, 119);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Client.Properties.Resources.padlock;
+            this.pictureBox2.Location = new System.Drawing.Point(60, 252);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Client.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 185);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(52, 280);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(202, 2);
+            this.panel8.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(53, 215);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(202, 2);
+            this.panel4.TabIndex = 9;
             // 
             // guna2ToggleSwitch1
             // 
@@ -352,6 +431,37 @@ namespace Client
             this.panel1.Size = new System.Drawing.Size(704, 601);
             this.panel1.TabIndex = 0;
             // 
+            // guna2CustomGradientPanel3
+            // 
+            this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel3.BorderRadius = 13;
+            this.guna2CustomGradientPanel3.BorderThickness = 2;
+            this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox9);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(29, 313);
+            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
+            this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(287, 214);
+            this.guna2CustomGradientPanel3.TabIndex = 16;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Client.Properties.Resources.png_clipart_cartoon_money_bag_money_bag_united_states_dollar_recreation;
+            this.pictureBox9.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(206, 154);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackgroundImage = global::Client.Properties.Resources.money_cartoon_icon_set_152558_100;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Location = new System.Drawing.Point(5, 88);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(339, 200);
+            this.panel7.TabIndex = 15;
+            // 
             // CreatePage
             // 
             this.CreatePage.Controls.Add(this.guna2CustomGradientPanel5);
@@ -387,6 +497,74 @@ namespace Client
             this.guna2CustomGradientPanel5.ShadowDecoration.Parent = this.guna2CustomGradientPanel5;
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(307, 522);
             this.guna2CustomGradientPanel5.TabIndex = 7;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.pictureBox7.Image = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm2;
+            this.pictureBox7.Location = new System.Drawing.Point(85, 43);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(139, 126);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::Client.Properties.Resources.padlock;
+            this.pictureBox6.Location = new System.Drawing.Point(56, 338);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::Client.Properties.Resources.padlock;
+            this.pictureBox5.Location = new System.Drawing.Point(56, 273);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Client.Properties.Resources.user;
+            this.pictureBox4.Location = new System.Drawing.Point(56, 213);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Black;
+            this.panel12.Location = new System.Drawing.Point(51, 371);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(202, 2);
+            this.panel12.TabIndex = 12;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Black;
+            this.panel11.Location = new System.Drawing.Point(51, 306);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(202, 2);
+            this.panel11.TabIndex = 12;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(52, 246);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(202, 2);
+            this.panel9.TabIndex = 11;
             // 
             // creatRePass
             // 
@@ -465,6 +643,37 @@ namespace Client
             this.btnCreate.TabIndex = 7;
             this.btnCreate.Text = "Sign In";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click_1);
+            // 
+            // createPass
+            // 
+            this.createPass.BackColor = System.Drawing.Color.Transparent;
+            this.createPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
+            this.createPass.BorderThickness = 0;
+            this.createPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.createPass.DefaultText = "";
+            this.createPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.createPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.createPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.createPass.DisabledState.Parent = this.createPass;
+            this.createPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.createPass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.createPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.createPass.FocusedState.Parent = this.createPass;
+            this.createPass.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.createPass.ForeColor = System.Drawing.Color.Black;
+            this.createPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.createPass.HoverState.Parent = this.createPass;
+            this.createPass.Location = new System.Drawing.Point(85, 270);
+            this.createPass.Margin = new System.Windows.Forms.Padding(2);
+            this.createPass.Name = "createPass";
+            this.createPass.PasswordChar = '\0';
+            this.createPass.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.createPass.PlaceholderText = "Password";
+            this.createPass.SelectedText = "";
+            this.createPass.ShadowDecoration.Parent = this.createPass;
+            this.createPass.Size = new System.Drawing.Size(170, 35);
+            this.createPass.TabIndex = 1;
+            this.createPass.UseSystemPasswordChar = true;
             // 
             // createUser
             // 
@@ -694,6 +903,15 @@ namespace Client
             this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(120, 99);
             this.guna2CustomGradientPanel7.TabIndex = 46;
             // 
+            // panel10
+            // 
+            this.panel10.BackgroundImage = global::Client.Properties.Resources.account;
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Location = new System.Drawing.Point(25, 18);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(65, 63);
+            this.panel10.TabIndex = 0;
+            // 
             // dateCheck
             // 
             this.dateCheck.BorderThickness = 2;
@@ -712,6 +930,72 @@ namespace Client
             this.dateCheck.Size = new System.Drawing.Size(195, 36);
             this.dateCheck.TabIndex = 45;
             this.dateCheck.Value = new System.DateTime(2021, 11, 2, 20, 27, 33, 0);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BorderRadius = 8;
+            this.btnReset.BorderThickness = 1;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReset.DisabledState.Parent = this.btnReset;
+            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Image = global::Client.Properties.Resources.arrow_circle;
+            this.btnReset.Location = new System.Drawing.Point(567, 166);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(110, 36);
+            this.btnReset.TabIndex = 54;
+            this.btnReset.Text = "reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderRadius = 8;
+            this.btnSearch.BorderThickness = 1;
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.DisabledState.Parent = this.btnSearch;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Image = global::Client.Properties.Resources.magnifier;
+            this.btnSearch.Location = new System.Drawing.Point(421, 166);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(110, 36);
+            this.btnSearch.TabIndex = 53;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.CheckedState.Parent = this.btnLogout;
+            this.btnLogout.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.HoverState.Parent = this.btnLogout;
+            this.btnLogout.Image = global::Client.Properties.Resources.back;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnLogout.ImageRotate = 0F;
+            this.btnLogout.Location = new System.Drawing.Point(659, 6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogout.PressedState.Parent = this.btnLogout;
+            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
+            this.btnLogout.Size = new System.Drawing.Size(43, 41);
+            this.btnLogout.TabIndex = 49;
+            this.btnLogout.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // label1
             // 
@@ -760,6 +1044,15 @@ namespace Client
             this.label5.Size = new System.Drawing.Size(82, 21);
             this.label5.TabIndex = 7;
             this.label5.Text = "TCP/Client";
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm1;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(27, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 29);
+            this.panel5.TabIndex = 7;
             // 
             // guna2ControlBox2
             // 
@@ -909,7 +1202,7 @@ namespace Client
             this.CreateClient.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CreateClient.ForeColor = System.Drawing.Color.Black;
             this.CreateClient.HoverState.Parent = this.CreateClient;
-            this.CreateClient.Location = new System.Drawing.Point(906, 284);
+            this.CreateClient.Location = new System.Drawing.Point(950, 283);
             this.CreateClient.Name = "CreateClient";
             this.CreateClient.ShadowDecoration.Parent = this.CreateClient;
             this.CreateClient.Size = new System.Drawing.Size(105, 43);
@@ -917,333 +1210,12 @@ namespace Client
             this.CreateClient.Text = "Create New";
             this.CreateClient.Click += new System.EventHandler(this.CreateClient_Click_3);
             // 
-            // btnConnect
-            // 
-            this.btnConnect.BorderRadius = 11;
-            this.btnConnect.BorderThickness = 1;
-            this.btnConnect.CheckedState.Parent = this.btnConnect;
-            this.btnConnect.CustomImages.Parent = this.btnConnect;
-            this.btnConnect.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConnect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConnect.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConnect.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConnect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConnect.DisabledState.Parent = this.btnConnect;
-            this.btnConnect.Enabled = false;
-            this.btnConnect.FillColor = System.Drawing.Color.YellowGreen;
-            this.btnConnect.FillColor2 = System.Drawing.Color.Lime;
-            this.btnConnect.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnConnect.ForeColor = System.Drawing.Color.Black;
-            this.btnConnect.HoverState.Parent = this.btnConnect;
-            this.btnConnect.Location = new System.Drawing.Point(1029, 284);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.ShadowDecoration.Parent = this.btnConnect;
-            this.btnConnect.Size = new System.Drawing.Size(82, 43);
-            this.btnConnect.TabIndex = 9;
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(53, 215);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(202, 2);
-            this.panel4.TabIndex = 9;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(52, 280);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(202, 2);
-            this.panel8.TabIndex = 10;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(52, 246);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(202, 2);
-            this.panel9.TabIndex = 11;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Location = new System.Drawing.Point(51, 306);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(202, 2);
-            this.panel11.TabIndex = 12;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Black;
-            this.panel12.Location = new System.Drawing.Point(51, 371);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(202, 2);
-            this.panel12.TabIndex = 12;
-            // 
-            // createPass
-            // 
-            this.createPass.BackColor = System.Drawing.Color.Transparent;
-            this.createPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(129)))), ((int)(((byte)(222)))));
-            this.createPass.BorderThickness = 0;
-            this.createPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.createPass.DefaultText = "";
-            this.createPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.createPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.createPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.createPass.DisabledState.Parent = this.createPass;
-            this.createPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.createPass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
-            this.createPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.createPass.FocusedState.Parent = this.createPass;
-            this.createPass.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.createPass.ForeColor = System.Drawing.Color.Black;
-            this.createPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.createPass.HoverState.Parent = this.createPass;
-            this.createPass.Location = new System.Drawing.Point(85, 270);
-            this.createPass.Margin = new System.Windows.Forms.Padding(2);
-            this.createPass.Name = "createPass";
-            this.createPass.PasswordChar = '\0';
-            this.createPass.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.createPass.PlaceholderText = "Password";
-            this.createPass.SelectedText = "";
-            this.createPass.ShadowDecoration.Parent = this.createPass;
-            this.createPass.Size = new System.Drawing.Size(170, 35);
-            this.createPass.TabIndex = 1;
-            this.createPass.UseSystemPasswordChar = true;
-            // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel2.BorderRadius = 13;
-            this.guna2CustomGradientPanel2.BorderThickness = 2;
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox8);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(25, 300);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(287, 214);
-            this.guna2CustomGradientPanel2.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm1;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(27, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(30, 29);
-            this.panel5.TabIndex = 7;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Client.Properties.Resources.png_clipart_cartoon_money_bag_money_bag_united_states_dollar_recreation;
-            this.pictureBox8.Location = new System.Drawing.Point(35, 30);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(206, 154);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::Client.Properties.Resources.money_cartoon_icon_set_152558_100;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Location = new System.Drawing.Point(3, 93);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(339, 200);
-            this.panel6.TabIndex = 7;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
-            this.pictureBox3.Image = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm3;
-            this.pictureBox3.Location = new System.Drawing.Point(79, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(139, 119);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Client.Properties.Resources.padlock;
-            this.pictureBox2.Location = new System.Drawing.Point(60, 252);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Client.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 185);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackgroundImage = global::Client.Properties.Resources.money_cartoon_icon_set_152558_100;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(5, 88);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(339, 200);
-            this.panel7.TabIndex = 15;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
-            this.pictureBox7.Image = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm2;
-            this.pictureBox7.Location = new System.Drawing.Point(85, 43);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(139, 126);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::Client.Properties.Resources.padlock;
-            this.pictureBox6.Location = new System.Drawing.Point(56, 338);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 27);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::Client.Properties.Resources.padlock;
-            this.pictureBox5.Location = new System.Drawing.Point(56, 273);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 27);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 14;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::Client.Properties.Resources.user;
-            this.pictureBox4.Location = new System.Drawing.Point(56, 213);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackgroundImage = global::Client.Properties.Resources.account;
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Location = new System.Drawing.Point(25, 18);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(65, 63);
-            this.panel10.TabIndex = 0;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BorderRadius = 8;
-            this.btnReset.BorderThickness = 1;
-            this.btnReset.CheckedState.Parent = this.btnReset;
-            this.btnReset.CustomImages.Parent = this.btnReset;
-            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReset.DisabledState.Parent = this.btnReset;
-            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Image = global::Client.Properties.Resources.arrow_circle;
-            this.btnReset.Location = new System.Drawing.Point(567, 166);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.ShadowDecoration.Parent = this.btnReset;
-            this.btnReset.Size = new System.Drawing.Size(110, 36);
-            this.btnReset.TabIndex = 54;
-            this.btnReset.Text = "reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 8;
-            this.btnSearch.BorderThickness = 1;
-            this.btnSearch.CheckedState.Parent = this.btnSearch;
-            this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.DisabledState.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Image = global::Client.Properties.Resources.magnifier;
-            this.btnSearch.Location = new System.Drawing.Point(421, 166);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
-            this.btnSearch.Size = new System.Drawing.Size(110, 36);
-            this.btnSearch.TabIndex = 53;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.CheckedState.Parent = this.btnLogout;
-            this.btnLogout.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.HoverState.Parent = this.btnLogout;
-            this.btnLogout.Image = global::Client.Properties.Resources.back;
-            this.btnLogout.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnLogout.ImageRotate = 0F;
-            this.btnLogout.Location = new System.Drawing.Point(659, 6);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogout.PressedState.Parent = this.btnLogout;
-            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
-            this.btnLogout.Size = new System.Drawing.Size(43, 41);
-            this.btnLogout.TabIndex = 49;
-            this.btnLogout.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel3.BorderRadius = 13;
-            this.guna2CustomGradientPanel3.BorderThickness = 2;
-            this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox9);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(29, 313);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.ShadowDecoration.Parent = this.guna2CustomGradientPanel3;
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(287, 214);
-            this.guna2CustomGradientPanel3.TabIndex = 16;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Client.Properties.Resources.png_clipart_cartoon_money_bag_money_bag_united_states_dollar_recreation;
-            this.pictureBox9.Location = new System.Drawing.Point(35, 30);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(206, 154);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
-            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(246)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(1136, 649);
-            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.CreateClient);
             this.Controls.Add(this.MessageFromServer);
             this.Controls.Add(this.label6);
@@ -1261,29 +1233,29 @@ namespace Client
             this.MainControl.ResumeLayout(false);
             this.login.ResumeLayout(false);
             this.LoginPage.ResumeLayout(false);
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel2.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.create.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.CreatePage.ResumeLayout(false);
             this.guna2CustomGradientPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.show.ResumeLayout(false);
             this.show.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coinsData)).EndInit();
             this.guna2CustomGradientPanel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1314,7 +1286,6 @@ namespace Client
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox MessageFromServer;
         private Guna.UI2.WinForms.Guna2GradientTileButton CreateClient;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnConnect;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel CreatePage;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
